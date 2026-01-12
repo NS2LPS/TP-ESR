@@ -1,0 +1,10 @@
+import pyvisa
+rm = pyvisa.ResourceManager()
+znd=rm.open_resource('znd')
+print('Connected to',znd.query('*IDN?'))
+mxg=rm.open_resource('mxg')
+print('Connected to',mxg.query('*IDN?'))
+dso=rm.open_resource('dso')
+print('Connected to',dso.query('*IDN?'))
+hmp=rm.open_resource('ASRL4::INSTR')
+print('Connected to',hmp.query('*IDN?'))
