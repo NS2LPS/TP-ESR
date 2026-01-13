@@ -1,4 +1,4 @@
-# Electron Spin Resonance Lab Class
+# Projet Expérimental: Résonance Paramagnétique Electronique
 
-- Jupyter folder: notebooks and code examples
-- Main folder: instructions for the lab class
+- Dossier Python: notebooks et examples de code pour contrôler les instruments
+- Dossier Main: instructions pour le TP

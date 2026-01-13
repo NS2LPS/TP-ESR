@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-1" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>My First Section</title>
+  <title>Caractérisation du résonateur diélectrique avec un analyseur de réseau</title>
   <introduction>
-    <p>Some words</p>
+    <p>
+      Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <m>S_{ij}</m> d'un dispositif micro-onde à un ou deux ports. Si <m>i=j</m> l'appareil mesure un coefficient de réflexion, et si $i\neq j$ un coefficient de transmission. Par exemple, pour mesurer <m>S_{12}</m>, l'appareil émet un signal par le port 2 et mesure sur le port 1. Le VNA permet de mesurer le module et le phase de chaque paramètre <m>S_{ij}</m> en fonction de la fréquence.
+    </p>
   </introduction>
-  <subsection xml:id="subsection-1">
-    <title>My First Subsection</title>
-    <p>Some more words</p>
-    <p>foo</p>
-    <figure>
-      <caption>A frog</caption>
-      <image source="frog.jpg" width="50%">
-        <description>A nice-looking frog with a longish description.</description>
-      </image>
-    </figure>
-    <p>Bar: <m>\foo</m></p>
+  <subsection xml:id="subsection-calibration">
+    <title>Calibration du VNA</title>
+    <p>
+      Avant d'utiliser le VNA pour faire des mesures, il faut le calibrer pour s'affranchir de la propagation dans les cables entre le VNA et lle dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port puis on mesure la transmission entre les deux ports (through).
+      <ul>
+        <li>
+          <p>
+            Branchez deux câbles sur le VNA et connecter les deux cables avec un "I". Appuyez sur "Preset" pour utiliser les paramètres de mesure par défaut.
+          </p>
+        </li>
+        <li>
+          <p>
+            Observez le signal mesuré en transmission <m>S_{12}</m> et en réflexion (<m>S_{11}</m> ou <m>S_{22}</m>).
+          </p>
+        </li>
+        <li>
+          <p>
+            Enlevez le I, et effectuez la calibration "TOSM" en appuyant sur la touche "CAL".
+          </p>
+        </li>
+        <li>
+          <p>
+            Enlevez le dispositif de calibration et observez les coefficients de réflexion en phase et module.
+          </p>
+        </li>
+        <li>
+          <p>
+            Connectez à nouveau les deux cables avec un I et observez la transmission en phase et module.
+          </p>
+        </li>
+        <li>
+          <p>
+            Remplacez le I par le guide microstrip sur le porte échantillon. Comment évolue la phase avec la fréquence ? En déduire la vitesse de propagation dans le guide.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-resonator-coupling">
+    <title>Caractérisation du résonateur en KTO</title>
+    <p>
+      
+    </p>
   </subsection>
 </section>

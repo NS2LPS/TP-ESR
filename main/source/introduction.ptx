@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<introduction xml:id="intro" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <p>L'objectif de la séance est de mettre en évidence le phénomène de résonance paramagnétique électronique. Ce phénomène également appelé **résonance de spin électronique (RSE)** ou *Electron Paramagnetic Resonance (EPR)* en anglais, est une technique de spectroscopie utilisée pour étudier les espèces chimiques possédant des **électrons non appariés**. Elle est particulièrement adaptée à l’analyse des **radicaux libres**, des **ions de métaux de transition** et de certains **défauts paramagnétiques** dans les solides. Le principe de la RPE repose sur l’interaction entre le **moment magnétique de l’électron** et un **champ magnétique externe**. Lorsqu’un échantillon paramagnétique est soumis à ce champ et irradié par des **micro-ondes**, une transition entre les niveaux d’énergie des spins électroniques peut se produire si la condition de résonance est satisfaite. </p>  
-    
-    <p>Cette condition de résonance s'écrit RPE permet notamment de déterminer des paramètres fondamentaux tels que le **facteur g**, les **interactions hyperfines** avec les noyaux voisins, ainsi que la **dynamique des spins**. Grâce à sa grande sensibilité et à son caractère non destructif, cette technique est largement utilisée dans de nombreux domaines, notamment la **chimie**, la **physique du solide**, la **science des matériaux**, la **biologie** et la **médecine**. 
-    </p>
-</introduction>
