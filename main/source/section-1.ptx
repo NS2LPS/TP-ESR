@@ -98,7 +98,7 @@
   <subsection xml:id="subsec-resonator-coupling">
     <title>Caractérisation du résonateur en KTO</title>
     <p>
-      Le résonateur diélectrique utilisé ici est un résonateur paralalipédique en KTO. L'épaisseur du résonateur est 500 µm, bien plus faible que les dimensions latérales qui sont 5x5 mm. En première approximation, on peut donc considérer que la couche de KTO est un guide planaire. Les modes propres sont alors les ondes stationaires d'un résonateur carré. Le mode fondamental est le mode TE01, dont le champ magnétique ressemble à celui d'un dipôle magnétique. La figure ci-dessous montre l'intensité et les lignes de champ magnétique:
+      Le résonateur diélectrique utilisé ici est un résonateur parallélépipédique en KTO. L'épaisseur du résonateur est 500 µm, bien plus faible que les dimensions latérales qui sont 5x5 mm. En première approximation, on peut donc considérer que la couche de KTO est un guide planaire. Les modes propres sont alors les ondes stationnaires d'un résonateur carré. Le mode fondamental est le mode TE01, dont le champ magnétique ressemble à celui d'un dipôle magnétique. La figure ci-dessous montre l'intensité et les lignes de champ magnétique:
     </p>
     <image source="KTO_TE01_mag_field_lines" width="50%" />
     <p>
@@ -123,7 +123,7 @@
     </p>
     <image source="sample_holder" width="50%" />
     <p>
-      Effectuez les mesures au VNA pour vérifier vos prédictions. Sauvez quelques traces au format HDF5 qui vous serviront à illsutrer votre rapport et essayez d'estimer <m>\kappa_i</m> pour le résonateur. 
+      Effectuez les mesures au VNA pour vérifier vos prédictions. Sauvez quelques traces au format HDF5 qui vous serviront à illustrer votre rapport et essayez d'estimer <m>\kappa_i</m> pour le résonateur. 
     </p>
     <p>
       Pour mesurer la résonance de spin, on cherche à mesurer le plus précisément possible la fréquence de résonance du résonateur. 

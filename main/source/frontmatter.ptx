@@ -16,7 +16,7 @@
         où <m>g</m> est le rapport gyromagnétique de l'électron (ou facteur de Landé) et <m>\mu_B</m> est le magnéton de Bohr. Pour un électron dans le vide, <m>g \approx 2</m> et la fréquence de résonance est d'environ 2.8 MHz/G. 
     </p>
     <p>
-        Pour observer cette résonance, nous allons coupler les spins électroniques à un résonateur diélectrique réalisé en <m>\ce{KTaO3}</m> (KTO), un matériau de grande constante diélectrique (<m>\epsilon_r \approx 400</m>) et observer la modification de la résonance du résonateur induite par la présence des spins. En rampant le champ magnéitique, la fréquence de résonance des spins augmente et lorsqu'elle traverse celle du résonateur, on observe un croisement évité, permettant d'identifier la résonance de spin électronique.
+        Pour observer cette résonance, nous allons coupler les spins électroniques à un résonateur diélectrique réalisé en <m>\ce{KTaO3}</m> (KTO), un matériau de grande constante diélectrique (<m>\epsilon_r \approx 400</m>) et observer la modification de la résonance du résonateur induite par la présence des spins. En rampant le champ magnétique, la fréquence de résonance des spins augmente et lorsqu'elle traverse celle du résonateur, on observe un croisement évité, permettant d'identifier la résonance de spin électronique.
     </p>
     <p>
       Le TP se déroule en trois parties:

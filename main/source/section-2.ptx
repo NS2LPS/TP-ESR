@@ -11,7 +11,7 @@
       <md>
         <mrow> A^{\text{in}} = A_0 e^{2i\pi f t} (1 + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon  \, e^{2i\pi f_{\phi\text{M}} t}  ) </mrow>
       </md>
-      Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. Le signal est réfléchi par le résonateur, que l'on suppose sans perte. Le coefficient de reflexion est de module unité et les trois composantes subissent juste un déphasage à la réflexion. Supposons que <m>f_{\phi\text{M}} \gg \kappa</m>, les bandes latérales ne sont alors pas affectées par le résonateur et ne sont donc pas déphasées. L'amplitude réfléchie est
+      Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. Le signal est réfléchi par le résonateur, que l'on suppose sans perte. Le coefficient de réflexion est de module unité et les trois composantes subissent juste un déphasage à la réflexion. Supposons que <m>f_{\phi\text{M}} \gg \kappa</m>, les bandes latérales ne sont alors pas affectées par le résonateur et ne sont donc pas déphasées. L'amplitude réfléchie est
       <md>
         <mrow> A^{\text{ref}} = A_0  e^{2i\pi f t} (e^{i \phi} + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon \, e^{2i\pi f_{\phi\text{M}} t}  ) </mrow>
       </md>
@@ -29,7 +29,7 @@
       <ul>
         <li>
           <p>
-            Réalisez le montage ci-dessus, l'élément à gauche est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.      
+            Réalisez le montage ci-dessus, l'élément à gauche est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionnelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.      
           </p>
         </li>
         <li>

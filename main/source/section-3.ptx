@@ -1,12 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-3" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Observation de la résonance de spin</title>
-  <p>
-    Bob
-  </p>
-      <figure>
-      <caption>A frog holderin png</caption>
-      <image source="scattering" width="50%" />
-    </figure>
+  <introduction>
+    <p>
+        Pour observer la résonance de spin, on dispose d'un électroaimant pouvant générer un champ magnétique variable entre 0 et 1 T. En plaçant un matériau avec des spins électroniques non appariés à la surface du résonateur au centre de l'aimant et en ajustant le champ magnétique pour que la fréquence de résonance des spins <m>g\mu_B B/h</m> coincide avec la fréquence du résonateur, on s'attend à observer une modification de la fréquence de résonance du résonateur que l'on détecte avec le montage Pound-Drever-Hall.
+    </p>
+    <p>
+        Pour améliorer la sensibilité de la mesure, on réalise un deuxième montage de détection synchrone. Le champ magnétique est modulé à environ 100 Hz et on démodule à cette fréquence le signal de sortie du montage Pound-Drever-Hall (PDH).
+    </p>
+  </introduction>
+  <subsection xml:id="subsec-magnet">
+    <title>Calibration de l'aimant</title>
+    <p>
+        <ul>
+            <li>
+                <p>
+                    A l'aide du gauss-mètre, mesurez l'intensité du champ magnétique au centre de l'aiant pour quelques valeurs de courant. Tracez la courbe de calibration de l'aimant.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Estimez le champ magnétique permettant de mettre les spins en résonance avec le mode du résonateur et le courant correspondant à mettre dans les bobines.
+                </p>
+            </li>
+        </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-ddlockin">
+    <title>Montage à double détection synchrone</title>
+    <p>
+        <ul>
+            <li>
+                <p>
+                    Programmez le H2FLI pour obtenir une modulation à 117 Hz sur la sortie 2
+                </p>
+            </li>
+            <li>
+                <p>
+                    Connectez la modulation à l'ampli de courant alimentant les bobines de modulation
+                </p>
+            </li>
+            <li>
+                <p>
+                    Ajustez le courant pour obtenir une modulation d'environ 1 A à travers les bobines
+                </p>
+            </li>
+            <li>
+                <p>
+                    Envoyez la sortie de la démodulation du montage PDH qui est disponible sur la sortie auxiliaire 1 vers l'entrée 2 du lockin
+                </p>
+            </li>
+            <li>
+                <p>
+                    Ajustez les paramètres du lockin, notamment la constante de temps pour optimiser le rapport signal à bruit. 
+                </p>
+            </li>
+        </ul>
+    </p>
+    <remark>
+        <p>
+            Un paramètre important dans une détection synchrone est la constante de temps d'intégration en sortie pour filtrer la composante à <m>2f_m</m> et minimiser le bruit. Plus le temps d'intégration est long, meilleur est le rapport signal/bruit mais plus le temps de réponse est lent. Vous pouvez lire la documentation sur le site de Zürich Instrument <url href="https://docs.zhinst.com/hf2_user_manual/signal_processing_basics.html">ici</url>. En particulier, le temps de stabilisation du signal en fonction de l'ordre du filtre et de la constante de temps <m>\tau</m> est rappelé ci-dessous:
+        </p>
+        <tabular halign="center">
+            <!-- header row -->
+            <row header="yes">
+            <cell>Ordre du filtre</cell>
+            <cell>50%</cell>
+            <cell>63% <m>(1-1/e)</m></cell>
+            <cell>90%</cell>
+            <cell>95%</cell>
+            <cell>99%</cell>
+            </row>
 
+            <!-- data rows -->
+            <row>
+            <cell>1st</cell>
+            <cell>0.7  <m>\tau</m></cell>
+            <cell>1.0  <m>\tau</m></cell>
+            <cell>2.3  <m>\tau</m></cell>
+            <cell>3.0  <m>\tau</m></cell>
+            <cell>4.6  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>2nd</cell>
+            <cell>1.7  <m>\tau</m></cell>
+            <cell>2.1  <m>\tau</m></cell>
+            <cell>3.9  <m>\tau</m></cell>
+            <cell>4.7  <m>\tau</m></cell>
+            <cell>6.6  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>3rd</cell>
+            <cell>2.7  <m>\tau</m></cell>
+            <cell>3.3  <m>\tau</m></cell>
+            <cell>5.3  <m>\tau</m></cell>
+            <cell>6.3  <m>\tau</m></cell>
+            <cell>8.4  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>4th</cell>
+            <cell>3.7  <m>\tau</m></cell>
+            <cell>4.4  <m>\tau</m></cell>
+            <cell>6.7  <m>\tau</m></cell>
+            <cell>7.8  <m>\tau</m></cell>
+            <cell>10.0  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>5th</cell>
+            <cell>4.7  <m>\tau</m></cell>
+            <cell>5.4  <m>\tau</m></cell>
+            <cell>8.0  <m>\tau</m></cell>
+            <cell>9.2  <m>\tau</m></cell>
+            <cell>11.6  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>6th</cell>
+            <cell>5.7  <m>\tau</m></cell>
+            <cell>6.5  <m>\tau</m></cell>
+            <cell>9.3  <m>\tau</m></cell>
+            <cell>10.5  <m>\tau</m></cell>
+            <cell>13.1  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>7th</cell>
+            <cell>6.7  <m>\tau</m></cell>
+            <cell>7.6  <m>\tau</m></cell>
+            <cell>10.5  <m>\tau</m></cell>
+            <cell>11.8  <m>\tau</m></cell>
+            <cell>14.6  <m>\tau</m></cell>
+            </row>
+
+            <row>
+            <cell>8th</cell>
+            <cell>7.7  <m>\tau</m></cell>
+            <cell>8.6  <m>\tau</m></cell>
+            <cell>11.8  <m>\tau</m></cell>
+            <cell>13.1  <m>\tau</m></cell>
+            <cell>16.0  <m>\tau</m></cell>
+            </row>
+        </tabular>
+    </remark>
+  </subsection>
 </section>

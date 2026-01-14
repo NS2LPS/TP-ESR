@@ -4,5 +4,6 @@
             "pattern": "**/source/**.ptx",
             "systemId": "/Users/jerome/.vscode/extensions/oscarlevin.pretext-tools-0.34.1/assets/schema/pretext.rng"
         }
-    ]
+    ],
+    "cSpell.language": "en,fr"
 }

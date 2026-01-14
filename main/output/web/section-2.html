@@ -153,7 +153,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lockin" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lockin</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Observation de la résonance de spin d’un radical libre</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Observation de la résonance de spin</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-magnet" class="internal"><span class="codenumber">3.1</span> <span class="title">Calibration de l’aimant</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-ddlockin" class="internal"><span class="codenumber">3.2</span> <span class="title">Montage à double détection synchrone</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-2"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Montage Pound-Drever-Hall</span>
@@ -168,7 +174,7 @@ eBookConfig.enable_chatcodes =  false;
 A^{\text{in}} = A_0 e^{2i\pi f t} (1 + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon  \, e^{2i\pi f_{\phi\text{M}} t}  ) 
 \end{gather*}
 </div>
-<div class="para">Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. Le signal est réfléchi par le résonateur, que l’on suppose sans perte. Le coefficient de reflexion est de module unité et les trois composantes subissent juste un déphasage à la réflexion. Supposons que <span class="process-math">\(f_{\phi\text{M}} \gg \kappa\text{,}\)</span> les bandes latérales ne sont alors pas affectées par le résonateur et ne sont donc pas déphasées. L’amplitude réfléchie est</div>
+<div class="para">Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. Le signal est réfléchi par le résonateur, que l’on suppose sans perte. Le coefficient de réflexion est de module unité et les trois composantes subissent juste un déphasage à la réflexion. Supposons que <span class="process-math">\(f_{\phi\text{M}} \gg \kappa\text{,}\)</span> les bandes latérales ne sont alors pas affectées par le résonateur et ne sont donc pas déphasées. L’amplitude réfléchie est</div>
 <div class="displaymath process-math" id="section-2-2-3-6">
 \begin{gather*}
 A^{\text{ref}} = A_0  e^{2i\pi f t} (e^{i \phi} + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon \, e^{2i\pi f_{\phi\text{M}} t}  ) 
@@ -189,7 +195,7 @@ P^{\text{ref}} = \frac{1}{2} (1+4 \epsilon \sin \phi \sin 2\pi f_{\phi\text{M}} 
 <div class="para logical" id="sec-montage-3">
 <ul class="disc" id="sec-montage-3-1">
 <li id="sec-montage-3-1-1">
-<div class="para" id="sec-montage-3-1-1-1">Réalisez le montage ci-dessus, l’élément à gauche est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-montage-3-1-1-1">Réalisez le montage ci-dessus, l’élément à gauche est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionnelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#sec-montage-3-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
@@ -203,7 +209,7 @@ P^{\text{ref}} = \frac{1}{2} (1+4 \epsilon \sin \phi \sin 2\pi f_{\phi\text{M}} 
 </div>
 <div class="para" id="sec-montage-4">Pour obtenir un signal d’erreur, il faut moduler en phase la source et démoduler le signal en sortie de la diode de détection. Pour cela, on utilise une détection synchrone (lockin), ici un HF2LI de Zürich Instruments.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/pdh_setup_2.svg" role="img" class="contained"></div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/pdh_setup_2.svg" role="img" class="contained"></div>
 <div class="para logical" id="sec-montage-6">
 <ul class="disc" id="sec-montage-6-1">
 <li id="sec-montage-6-1-1">
