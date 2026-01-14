@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Caractérisation d’un résonateur diélectrique avec un analyseur de réseau</title>
+<title>Résonateur diélectrique en KTO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -99,7 +99,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.8';
+eBookConfig.runestone_version = '7.11.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -137,59 +137,165 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter">
-<div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="shorttitlelowercase-2.html#shorttitlelowercase-2-4" class="internal"><span class="title">Résumé</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div></li>
 <li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Caractérisation d’un résonateur diélectrique avec un analyseur de réseau</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsection-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Calibration du VNA</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Résonateur diélectrique en KTO</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-" class="internal"><span class="codenumber">1.1</span> <span class="title">Analyseur de réseau (VNA)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsection-calibration" class="internal"><span class="codenumber">1.2</span> <span class="title">Calibration du VNA</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-resonator-coupling" class="internal"><span class="codenumber">1.3</span> <span class="title">Caractérisation du résonateur en KTO</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">My Additional Section</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Montage Pound-Drever-Hall</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#sec-montage" class="internal"><span class="codenumber">2.1</span> <span class="title">Schéma du montage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lockin" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lockin</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Observation de la résonance de spin d’un radical libre</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Caractérisation d’un résonateur diélectrique avec un analyseur de réseau</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Résonateur diélectrique en KTO</span>
 </h2>
-<section class="introduction" id="section-1-2"><div class="para" id="section-1-2-1">Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <span class="process-math">\(S_{ij}\)</span>d’un dispositif micro-onde à un ou deux ports. Si <span class="process-math">\(i=j\)</span> l’appareil mesure un coefficient de réflexion, et si $i\neq j$ un coefficient de transmission. Par exemple, pour mesurer <span class="process-math">\(S_{12}\text{,}\)</span> l’appareil émet un signal par le port 2 et mesure sur le port 1. Le VNA permet de mesurer le module et le phase de chaque paramètre <span class="process-math">\(S_{ij}\)</span> en fonction de la fréquence.<div class="autopermalink" data-description="Paragraphe"><a href="#section-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calibration du VNA</span>
+<section class="introduction" id="section-1-2"><div class="para" id="section-1-2-1">Dans cette première partie, l’objectif est de caractériser le résonateur diélectrique qui sera utilisé dans la troisième partie pour observer la résonance de spin. Pour observer la résonance qui se situe dans le domaine micro-onde (entre 7 et 8 GHz), on utilise un analyseur de réseau vectoriel, en anglais Vector Network Analyzer (VNA).<div class="autopermalink" data-description="Paragraphe"><a href="#section-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Analyseur de réseau (VNA)</span>
 </h3>
-<div class="para logical" id="subsection-1-2">
-<div class="para">Avant d’utiliser le VNA pour faire des mesures, il faut le calibrer pour s’affranchir de la propagation dans les cables entre le VNA et lle dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port puis on mesure la transmission entre les deux ports (through).</div>
-<ul class="disc" id="subsection-1-2-1">
-<li id="subsection-1-2-1-1">
-<div class="para" id="subsection-1-2-1-1-1">Brancher deux câbles sur le VNA et connecter les deux cables avec un "I". Appuyer sur "Preset" pour utiliser les paramètres de mesure par défaut.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec--2">Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <span class="process-math">\(S_{ij}\)</span> d’un dispositif micro-onde à un ou deux ports.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsection-1-2-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
-</li>
-<li id="subsection-1-2-1-2">
-<div class="para" id="subsection-1-2-1-2-1">Observer le signal mesuré en transmission <span class="process-math">\(S_{12}\)</span> et en réflexion (<span class="process-math">\(S_{11}\)</span> ou <span class="process-math">\(S_{22}\)</span>).<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/scattering.svg" role="img" class="contained"></div>
+<div class="para logical" id="subsec--4">
+<div class="para">La matrice de scattering <span class="process-math">\(S_{ij}\)</span> relie les amplitudes diffusées aux amplitudes incidentes</div>
+<div class="displaymath process-math" id="subsec--4-2">
+\begin{align*}
+\begin{pmatrix} a_{1}^\text{out} \\ a_{2}^\text{out} \end{pmatrix} = \begin{pmatrix} S_{11} \amp S_{12} \\ S_{21} \amp S_{22} \end{pmatrix}  \begin{pmatrix} a_{1}^\text{in} \\ a_{2}^\text{in} \end{pmatrix} 
+\end{align*}
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsection-1-2-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
-</li>
-<li id="subsection-1-2-1-3">
-<div class="para" id="subsection-1-2-1-3-1">Enlever le I, et effectuer la calibration "TOSM" en appuyant sur la touche "CAL".<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsection-1-2-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
-</li>
-<li id="subsection-1-2-1-4">
-<div class="para" id="subsection-1-2-1-4-1">Enlever le dispositif de calibration et observer les coefficients de réflexion en phase et module.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2-1-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec--5">L’analyseur peut mesurer à la fois les coefficients de réflexion <span class="process-math">\(S_{ii}\)</span> et de transmission <span class="process-math">\(S_{i \neq j}\text{.}\)</span> En général <span class="process-math">\(S_{12}=S_{21}\text{,}\)</span> mais ce n’est pas forcément le cas. Pour mesurer, par exemple <span class="process-math">\(S_{12}\text{,}\)</span> l’appareil émet un signal par le port 2 et mesure le signal sur le port 1. Le VNA mesure le module et le phase de chaque paramètre <span class="process-math">\(S_{ij}\)</span> en fonction de la fréquence.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsection-1-2-1-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
-</li>
-<li id="subsection-1-2-1-5">
-<div class="para" id="subsection-1-2-1-5-1">Connecter à nouveau les deux cables avec un I et observer la transmission en phase et module.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2-1-5-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para logical" id="subsec--6">
+<div class="para">Les paramètres les plus importants à régler pour la mesure sont:</div>
+<ul class="disc" id="subsec--6-1">
+<li id="subsec--6-1-1">
+<div class="para" id="subsec--6-1-1-1">le "span", c’est à dire l’étendue du domaine de fréquence <span class="process-math">\(\Delta f\)</span> qui est balayé pendant un sweep<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--6-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsection-1-2-1-5" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec--6-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="subsection-1-2-1-6">
-<div class="para" id="subsection-1-2-1-6-1"><div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2-1-6-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div></div>
-<div class="autopermalink" data-description="Point"><a href="#subsection-1-2-1-6" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<li id="subsec--6-1-2">
+<div class="para" id="subsec--6-1-2-1">le nombre de points <span class="process-math">\(N\)</span> dans le sweep en fréquence qui fixe l’écart <span class="process-math">\(\delta f = \Delta f/N\)</span> entre deux points de msesure<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--6-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec--6-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec--6-1-3">
+<div class="para" id="subsec--6-1-3-1">la largeur de bande (Resolution Bandwidth, "RBW") qui fixe le temps d’intégration (<span class="process-math">\(1/\text{RBW}\)</span>) pour chaque point de mesure<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--6-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec--6-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec--6-1-4">
+<div class="para" id="subsec--6-1-4-1">la puissance émise par le VNA pour effectuer la mesure ("Power")<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--6-1-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec--6-1-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsec--6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Sous-section 1.1: Calibration du VNA"><a href="#subsection-1" title="Copy heading and permalink for Sous-section 1.1: Calibration du VNA" aria-label="Copy heading and permalink for Sous-section 1.1: Calibration du VNA">🔗</a></div></section><div class="autopermalink" data-description="Section 1: Caractérisation d’un résonateur diélectrique avec un analyseur de réseau"><a href="#section-1" title="Copy heading and permalink for Section 1: Caractérisation d’un résonateur diélectrique avec un analyseur de réseau" aria-label="Copy heading and permalink for Section 1: Caractérisation d’un résonateur diélectrique avec un analyseur de réseau">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Sous-section 1.1: Analyseur de réseau (VNA)"><a href="#subsec-" title="Copy heading and permalink for Sous-section 1.1: Analyseur de réseau (VNA)" aria-label="Copy heading and permalink for Sous-section 1.1: Analyseur de réseau (VNA)">🔗</a></div></section><section class="subsection" id="subsection-calibration"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calibration du VNA</span>
+</h3>
+<div class="para logical" id="subsection-calibration-2">
+<div class="para">Avant d’utiliser le VNA pour caractériser un élément, il faut effectuer une calibration afin de s’affranchir de la propagation dans les cables entre le VNA et le dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port, puis on mesure la transmission entre les deux ports (through).</div>
+<ul class="disc" id="subsection-calibration-2-1">
+<li id="subsection-calibration-2-1-1">
+<div class="para" id="subsection-calibration-2-1-1-1">Branchez deux câbles SMA sur les deux ports du VNA et connecter les deux câbles avec un I. Appuyez sur "Preset" pour appliquer les paramètres de mesure par défaut.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-2">
+<div class="para" id="subsection-calibration-2-1-2-1">Explorez les menus "Measurement" et "Format" pour mesurer et afficher le module et la phase ou la partie réelle et imaginaire de différents paramètres de scattering.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-3">
+<div class="para" id="subsection-calibration-2-1-3-1">Observez le signal mesuré en transmission <span class="process-math">\(S_{12}\)</span> et en réflexion (<span class="process-math">\(S_{11}\)</span> ou <span class="process-math">\(S_{22}\)</span>). Comparez au signal attendu pour un montage idéal.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-4">
+<div class="para" id="subsection-calibration-2-1-4-1">Enlevez le I, et effectuez la calibration "TOSM" en appuyant sur la touche "CAL". Suivez les instructions et branchez chaque élément du kit de calibration sur chaque câble avant de lancer la mesure.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-5">
+<div class="para" id="subsection-calibration-2-1-5-1">Enlevez le dispositif de calibration et observez à nouveau les coefficients de réflexion en phase et module. Qu’observez vous ?<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-5-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-5" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-6">
+<div class="para" id="subsection-calibration-2-1-6-1">Connectez à nouveau les deux cables avec un I et observez la transmission en phase et module. Qu’observez vous ?<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-6-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-6" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-7">
+<div class="para" id="subsection-calibration-2-1-7-1">Remplacez le I par le guide microstrip sur le porte échantillon. Comment évolue la phase avec la fréquence ? En déduire la vitesse de propagation dans le guide du porte-échantillon. On pourra acquérir une trace et en faire l’analyse dans un notebook Jupyter.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-7-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-7" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsection-calibration-2-1-8">
+<div class="para" id="subsection-calibration-2-1-8-1">Utilisez la fonction "Auto length" dans le menu "Offset" pour compenser la propagation dans le guide. Le dispositif est maintenant calibré.<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2-1-8-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsection-calibration-2-1-8" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsection-calibration-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Sous-section 1.2: Calibration du VNA"><a href="#subsection-calibration" title="Copy heading and permalink for Sous-section 1.2: Calibration du VNA" aria-label="Copy heading and permalink for Sous-section 1.2: Calibration du VNA">🔗</a></div></section><section class="subsection" id="subsec-resonator-coupling"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Caractérisation du résonateur en KTO</span>
+</h3>
+<div class="para" id="subsec-resonator-coupling-2">Le résonateur diélectrique utilisé ici est un résonateur paralalipédique en KTO. L’épaisseur du résonateur est 500 µm, bien plus faible que les dimensions latérales qui sont 5x5 mm. En première approximation, on peut donc considérer que la couche de KTO est un guide planaire. Les modes propres sont alors les ondes stationaires d’un résonateur carré. Le mode fondamental est le mode TE01, dont le champ magnétique ressemble à celui d’un dipôle magnétique. La figure ci-dessous montre l’intensité et les lignes de champ magnétique:<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/KTO_TE01_mag_field_lines.svg" role="img" class="contained"></div>
+<div class="para" id="subsec-resonator-coupling-4">Pour exciter les modes de résonance, il suffit de placer le KTO près du guide d’onde sur le porte échantillon.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-resonator-coupling-5">
+<ul class="disc" id="subsec-resonator-coupling-5-1">
+<li id="subsec-resonator-coupling-5-1-1">
+<div class="para" id="subsec-resonator-coupling-5-1-1-1">Placez le résonateur près du guide et observez la transmission au VNA entre 7 et 8 GHz.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-5-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-resonator-coupling-5-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec-resonator-coupling-5-1-2">
+<div class="para" id="subsec-resonator-coupling-5-1-2-1">Comment varie la résonance avec la distance au guide ?<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-5-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-resonator-coupling-5-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="subsec-resonator-coupling-6">Pour comprendre l’évolution de la résonance, on introduit le taux de perte par couplage <span class="process-math">\(\kappa_c\)</span> et le taux de perte intrinsèque <span class="process-math">\(\kappa_i\text{.}\)</span> Les pertes totales sont <span class="process-math">\(\kappa=\kappa_c+\kappa_i\text{,}\)</span> l’énergie stockée dans le résonateur décroît comme <span class="process-math">\(\exp (-\kappa t)\)</span> avec le temps. On distingue deux régimes limites: le régime sur-couplé <span class="process-math">\(\kappa_c \gg \kappa_i\)</span> et le régime sous-couplé <span class="process-math">\(\kappa_c \ll \kappa_i\text{.}\)</span> Sans faire de calcul, essayez de tracer <span class="process-math">\(S_{12}\text{,}\)</span> <span class="process-math">\(S_{13}\)</span> et <span class="process-math">\(S_{33}\)</span> dans chaque régime. Les numéros des ports sont définis sur le schéma ci-dessous:<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/sample_holder.svg" role="img" class="contained"></div>
+<div class="para" id="subsec-resonator-coupling-8">Effectuez les mesures au VNA pour vérifier vos prédictions. Sauvez quelques traces au format HDF5 qui vous serviront à illsutrer votre rapport et essayez d’estimer <span class="process-math">\(\kappa_i\)</span> pour le résonateur.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-8" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-resonator-coupling-9">
+<div class="para">Pour mesurer la résonance de spin, on cherche à mesurer le plus précisément possible la fréquence de résonance du résonateur.</div>
+<ul class="disc" id="subsec-resonator-coupling-9-1">
+<li id="subsec-resonator-coupling-9-1-1">
+<div class="para" id="subsec-resonator-coupling-9-1-1-1">Dans quel régime de couplage faut-il se placer ?<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-9-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-resonator-coupling-9-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec-resonator-coupling-9-1-2">
+<div class="para" id="subsec-resonator-coupling-9-1-2-1">Trouvez une configuration où ce régime est à peu près atteint pour la mesure <span class="process-math">\(S_{12}\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-9-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-resonator-coupling-9-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-resonator-coupling-9" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Sous-section 1.3: Caractérisation du résonateur en KTO"><a href="#subsec-resonator-coupling" title="Copy heading and permalink for Sous-section 1.3: Caractérisation du résonateur en KTO" aria-label="Copy heading and permalink for Sous-section 1.3: Caractérisation du résonateur en KTO">🔗</a></div></section><div class="autopermalink" data-description="Section 1: Résonateur diélectrique en KTO"><a href="#section-1" title="Copy heading and permalink for Section 1: Résonateur diélectrique en KTO" aria-label="Copy heading and permalink for Section 1: Résonateur diélectrique en KTO">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="shorttitlelowercase-2.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-2.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

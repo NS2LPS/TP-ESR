@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-2" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>My Additional Section</title>
-  <p>foo</p>
-  <figure xml:id="figure-tikz-example-diagram">
-    <caption>The graph <m>C_5</m> made by TikZ</caption>
-    <image xml:id="tikz-example-diagram" width="20%">
-      <description>A 5-cycle</description>
-      <latex-image> \begin{tikzpicture} \coordinate (A) at (90+360/5:1); \coordinate (B) at (90+2*360/5:1); \coordinate (C) at (90+3*360/5:1); \coordinate (D) at (90+4*360/5:1); \coordinate (E) at (90:1); \draw (A) -- (B) -- (C) -- (D) -- (E) -- (A); \foreach \x in {(A), (B), (C), (D), (E)}{ \fill \x circle (2pt); } \end{tikzpicture} </latex-image>
-    </image>
-  </figure>
-  <p>bar</p>
+  <title>Montage Pound-Drever-Hall</title>
+  <introduction>
+    <p>
+      Le montage de Pound-Drever-Hall est surtout utilisé en optique pour asservir un laser sur une cavité. Il peut être adapté au régime micro-onde avec une source et un résonateur. A la résonance, l'intensité su signal transmis ou réfléchi par le résonateur passe par un maximum ou un minimum avec une dérivée nulle. La méthode développée par Pound, Drever et Hall permet d'obtenir un signal d'erreur qui passe par zéro lorsque la fréquence de la source traverse la fréquence de résonance de la cavité. La page <url href="https://en.wikipedia.org/wiki/Pound%E2%80%93Drever%E2%80%93Hall_technique">Wikipedia</url> explique en détail la technique. La méthode est utilisée le plus souvent en réflexion mais fonctionne également en transmission.
+    </p>
+    <image source="pdh_principle" width="70%"/>
+    <p>
+      Pour obtenir un signal d'erreur, la source est modulé en phase à une fréquence <m>f_{\phi\text{M}}</m>. Le signal arrivant sur la résonateur contient trois fréquences: une porteuse à <m>f</m> et deux bandes latérales à <m>f \pm f_{\phi\text{M}}</m>. En notation complexe, l'amplitude émise par la source incidente sur le résonateur s'écrit:
+      <md>
+        <mrow> A^{\text{in}} = A_0 e^{2i\pi f t} (1 + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon  \, e^{2i\pi f_{\phi\text{M}} t}  ) </mrow>
+      </md>
+      Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. Le signal est réfléchi par le résonateur, que l'on suppose sans perte. Le coefficient de reflexion est de module unité et les trois composantes subissent juste un déphasage à la réflexion. Supposons que <m>f_{\phi\text{M}} \gg \kappa</m>, les bandes latérales ne sont alors pas affectées par le résonateur et ne sont donc pas déphasées. L'amplitude réfléchie est
+      <md>
+        <mrow> A^{\text{ref}} = A_0  e^{2i\pi f t} (e^{i \phi} + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon \, e^{2i\pi f_{\phi\text{M}} t}  ) </mrow>
+      </md>
+      Au premier ordre en <m>\epsilon</m>, la puissance réfléchie est
+      <md>
+        <mrow> P^{\text{ref}} = \frac{1}{2} (1+4 \epsilon \sin \phi \sin 2\pi f_{\phi\text{M}} t) </mrow>
+      </md>
+      On voit donc que la phase <m>\phi</m>, qui passe par zéro à la résonance, peut être mesurée en démodulant la tension en sortie de la diode à la fréquence <m>f_{\phi\text{M}}</m>. Le signe moins entre bandes latérales permet d'obtenir <m>\sin \phi</m> (et non <m>\cos \phi</m>).
+    </p>
+  </introduction>
+  <subsection xml:id="sec-montage">
+    <title>Schéma du montage</title>
+    <image source="pdh_setup_1" width="75%" />
+    <p>
+      <ul>
+        <li>
+          <p>
+            Réalisez le montage ci-dessus, l'élément à gauche est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.      
+          </p>
+        </li>
+        <li>
+          <p>
+            Programmez un sweep en fréquence sur la source micro-onde et observez la résonance en mesurant la tension à la sortie de la diode. Vous devez obtenir un pic de tension, comparable à la mesure obtenue en module avec le VNA.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Pour obtenir un signal d'erreur, il faut moduler en phase la source et démoduler le signal en sortie de la diode de détection. Pour cela, on utilise une détection synchrone (lockin), ici un HF2LI de Zürich Instruments. 
+    </p>
+    <image source="pdh_setup_2" width="75%" />
+    <p>
+      <ul>
+        <li>
+          <p>
+             Modifiez le montage comme ci-dessus pour brancher la modulation du lockin à  <m>f_{\phi\text{M}}</m> sur l'entrée externe de la source micro-onde et la sortie de la diode sur l'entrée de mesure du lockin.
+          </p>
+        </li>
+        <li>
+          <p>
+            Programmez la source micro-onde pour obtenir une modulation en phase pilotée par l'entrée externe. Utilisez le mode <m>\phi\text{M}</m> High Bandwidth et mettre l'amplitude de modulation de phase au maximum.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-lockin">
+    <title>Réglage du lockin</title>
+    <p>
+      L'interface de contrôle du lockin est accessible <url href="https://localhost:8006">ici</url>. 
+      <ul>
+        <li>
+          <p>
+            Programmez le lockin pour effectuer une mesure à <m>f_{\phi\text{M}}</m> de l'ordre de quelques MHz (typiquement 2 MHz), utilisez une amplitude de modulation de 1 Vpp maximum.
+          </p>
+        </li>
+        <li>
+          <p>
+            Réglez la démodulation jusqu'à observer un signal d'erreur lorsque la source effectue un sweep en fréquence.
+          </p>
+        </li>
+        <li>
+          <p>
+            Programmez le lockin pour envoyer le résultat de la démodulation sur la voie auxiliaire 1 afin de pouvoir l'observer sur l'oscillo.
+          </p>
+        </li>
+        <li>
+          <p>
+            Optimisez les paramètres, fréquence, déphasage, amplitude de modulation, position du KTO... pour maximiser l'amplitude du signal d'erreur. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Sauvez quelques traces d'oscillo montrant les différents signaux en fonction de la rampe de fréquence.
+          </p>
+        </li>
+        <li>
+          <p>
+            Estimez la sensibilité de la mesure de la fréquence de résonance
+          </p>
+        </li>
+      </ul>      
+    </p>
+  </subsection>
 </section>

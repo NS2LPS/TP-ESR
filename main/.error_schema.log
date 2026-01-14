@@ -1,4 +1,4 @@
-<string>:10:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element frontmatter has extra content: abstract
+<string>:10:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element frontmatter has extra content: p
 <string>:2:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element frontmatter there
 <string>:2:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got frontmatter
 <string>:2:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got frontmatter

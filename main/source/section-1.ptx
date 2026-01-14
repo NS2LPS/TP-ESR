@@ -1,44 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-1" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Caractérisation du résonateur diélectrique avec un analyseur de réseau</title>
+  <title>Résonateur diélectrique en KTO</title>
   <introduction>
     <p>
-      Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <m>S_{ij}</m> d'un dispositif micro-onde à un ou deux ports. Si <m>i=j</m> l'appareil mesure un coefficient de réflexion, et si $i\neq j$ un coefficient de transmission. Par exemple, pour mesurer <m>S_{12}</m>, l'appareil émet un signal par le port 2 et mesure sur le port 1. Le VNA permet de mesurer le module et le phase de chaque paramètre <m>S_{ij}</m> en fonction de la fréquence.
+      Dans cette première partie, l'objectif est de caractériser le résonateur diélectrique qui sera utilisé dans la troisième partie pour observer la résonance de spin. Pour observer la résonance qui se situe dans le domaine micro-onde (entre 7 et 8 GHz), on utilise un analyseur de réseau vectoriel, en anglais Vector Network Analyzer (VNA). 
     </p>
   </introduction>
-  <subsection xml:id="subsection-calibration">
-    <title>Calibration du VNA</title>
+  <subsection xml:id="subsec-">
+    <title>Analyseur de réseau (VNA)</title>
     <p>
-      Avant d'utiliser le VNA pour faire des mesures, il faut le calibrer pour s'affranchir de la propagation dans les cables entre le VNA et lle dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port puis on mesure la transmission entre les deux ports (through).
+    Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <m>S_{ij}</m> d'un dispositif micro-onde à un ou deux ports.  
+    </p>
+    <image source="scattering" width="50%"/>            
+    <p>
+      La matrice de scattering <m>S_{ij}</m> relie les amplitudes diffusées aux amplitudes incidentes
+      <md><mrow>
+        \begin{pmatrix} a_{1}^\text{out} \\ a_{2}^\text{out} \end{pmatrix} = \begin{pmatrix} S_{11} \amp S_{12} \\ S_{21} \amp S_{22} \end{pmatrix}  \begin{pmatrix} a_{1}^\text{in} \\ a_{2}^\text{in} \end{pmatrix} 
+      </mrow></md>
+    </p>
+    <p>
+      L'analyseur peut mesurer à la fois les coefficients de réflexion <m>S_{ii}</m> et de transmission <m>S_{i \neq j}</m>. En général <m>S_{12}=S_{21}</m>, mais ce n'est pas forcément le cas. Pour mesurer, par exemple <m>S_{12}</m>, l'appareil émet un signal par le port 2 et mesure le signal sur le port 1. Le VNA mesure le module et le phase de chaque paramètre <m>S_{ij}</m> en fonction de la fréquence. 
+    </p>
+    <p>
+      Les paramètres les plus importants à régler pour la mesure sont:
       <ul>
         <li>
           <p>
-            Branchez deux câbles sur le VNA et connecter les deux cables avec un "I". Appuyez sur "Preset" pour utiliser les paramètres de mesure par défaut.
+            le "span", c'est à dire l'étendue du domaine de fréquence <m>\Delta f</m> qui est balayé pendant un sweep 
           </p>
         </li>
         <li>
           <p>
-            Observez le signal mesuré en transmission <m>S_{12}</m> et en réflexion (<m>S_{11}</m> ou <m>S_{22}</m>).
+            le nombre de points <m>N</m> dans le sweep en fréquence qui fixe l'écart <m>\delta f = \Delta f/N</m> entre deux points de msesure
           </p>
         </li>
         <li>
           <p>
-            Enlevez le I, et effectuez la calibration "TOSM" en appuyant sur la touche "CAL".
+            la largeur de bande (Resolution Bandwidth, "RBW") qui fixe le temps d'intégration (<m>1/\text{RBW}</m>) pour chaque point de mesure
           </p>
         </li>
         <li>
           <p>
-            Enlevez le dispositif de calibration et observez les coefficients de réflexion en phase et module.
+            la puissance émise par le VNA pour effectuer la mesure ("Power")
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-calibration">
+    <title>Calibration du VNA</title>
+    <p>
+      Avant d'utiliser le VNA pour caractériser un élément, il faut effectuer une calibration afin de s'affranchir de la propagation dans les cables entre le VNA et le dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port, puis on mesure la transmission entre les deux ports (through).
+      <ul>
+        <li>
+          <p>
+            Branchez deux câbles SMA sur les deux ports du VNA et connecter les deux câbles avec un I. Appuyez sur "Preset" pour appliquer les paramètres de mesure par défaut.
           </p>
         </li>
         <li>
           <p>
-            Connectez à nouveau les deux cables avec un I et observez la transmission en phase et module.
+            Explorez les menus "Measurement" et "Format" pour mesurer et afficher le module et la phase ou la partie réelle et imaginaire de différents paramètres de scattering.
           </p>
         </li>
         <li>
           <p>
-            Remplacez le I par le guide microstrip sur le porte échantillon. Comment évolue la phase avec la fréquence ? En déduire la vitesse de propagation dans le guide.
+            Observez le signal mesuré en transmission <m>S_{12}</m> et en réflexion (<m>S_{11}</m> ou <m>S_{22}</m>). Comparez au signal attendu pour un montage idéal.
+          </p>
+        </li>
+        <li>
+          <p>
+            Enlevez le I, et effectuez la calibration "TOSM" en appuyant sur la touche "CAL". Suivez les instructions et branchez chaque élément du kit de calibration sur chaque câble avant de lancer la mesure.
+          </p>
+        </li>
+        <li>
+          <p>
+            Enlevez le dispositif de calibration et observez à nouveau les coefficients de réflexion en phase et module. Qu'observez vous ?
+          </p>
+        </li>
+        <li>
+          <p>
+            Connectez à nouveau les deux cables avec un I et observez la transmission en phase et module. Qu'observez vous ?
+          </p>
+        </li>
+        <li>
+          <p>
+            Remplacez le I par le guide microstrip sur le porte échantillon. Comment évolue la phase avec la fréquence ? En déduire la vitesse de propagation dans le guide du porte-échantillon. On pourra acquérir une trace et en faire l'analyse dans un notebook Jupyter.
+          </p>
+        </li>
+        <li>
+          <p>
+            Utilisez la fonction "Auto length" dans le menu "Offset" pour compenser la propagation dans le guide. Le dispositif est maintenant calibré.
           </p>
         </li>
       </ul>
@@ -47,7 +98,47 @@
   <subsection xml:id="subsec-resonator-coupling">
     <title>Caractérisation du résonateur en KTO</title>
     <p>
-      
+      Le résonateur diélectrique utilisé ici est un résonateur paralalipédique en KTO. L'épaisseur du résonateur est 500 µm, bien plus faible que les dimensions latérales qui sont 5x5 mm. En première approximation, on peut donc considérer que la couche de KTO est un guide planaire. Les modes propres sont alors les ondes stationaires d'un résonateur carré. Le mode fondamental est le mode TE01, dont le champ magnétique ressemble à celui d'un dipôle magnétique. La figure ci-dessous montre l'intensité et les lignes de champ magnétique:
+    </p>
+    <image source="KTO_TE01_mag_field_lines" width="50%" />
+    <p>
+      Pour exciter les modes de résonance, il suffit de placer le KTO près du guide d'onde sur le porte échantillon.
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            Placez le résonateur près du guide et observez la transmission au VNA entre 7 et 8 GHz.
+          </p>
+        </li>
+        <li>
+          <p>
+            Comment varie la résonance avec la distance au guide ?
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Pour comprendre l'évolution de la résonance, on introduit le taux de perte par couplage <m>\kappa_c</m> et le taux de perte intrinsèque <m>\kappa_i</m>. Les pertes totales sont <m>\kappa=\kappa_c+\kappa_i</m>, l'énergie stockée dans le résonateur décroît comme <m>\exp (-\kappa t)</m> avec le temps. On distingue deux régimes limites: le régime sur-couplé <m>\kappa_c \gg \kappa_i</m> et le régime sous-couplé <m>\kappa_c \ll \kappa_i</m>. Sans faire de calcul, essayez de tracer <m>S_{12}</m>, <m>S_{13}</m> et <m>S_{33}</m> dans chaque régime. Les numéros des ports sont définis sur le schéma ci-dessous:
+    </p>
+    <image source="sample_holder" width="50%" />
+    <p>
+      Effectuez les mesures au VNA pour vérifier vos prédictions. Sauvez quelques traces au format HDF5 qui vous serviront à illsutrer votre rapport et essayez d'estimer <m>\kappa_i</m> pour le résonateur. 
+    </p>
+    <p>
+      Pour mesurer la résonance de spin, on cherche à mesurer le plus précisément possible la fréquence de résonance du résonateur. 
+      <ul>
+        <li>
+          <p>
+            Dans quel régime de couplage faut-il se placer ?
+          </p>
+        </li>
+        <li>
+          <p>
+            Trouvez une configuration où ce régime est à peu près atteint pour la mesure <m>S_{12}</m>.
+          </p>
+        </li>
+      </ul>
     </p>
   </subsection>
 </section>

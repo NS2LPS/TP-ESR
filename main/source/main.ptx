@@ -3,7 +3,7 @@
 
   <docinfo>
     <document-id>authorslastnamelowercase-ShortTitleCamelCase</document-id>
-    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+    <!-- <latex-image-preamble>\usepackage{tikz}</latex-image-preamble> -->
   </docinfo>
 
   <article xml:id="shorttitlelowercase">

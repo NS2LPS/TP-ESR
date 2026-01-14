@@ -1,0 +1,15 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Building target web
+INFO    : XSL conversion of /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx by /Users/jerome/.ptx/2.35.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/section-3.ptx: Document is empty, line 1, column 1 (section-3.ptx, line 1)
+ERROR   : Error assembling source file: Document is empty, line 1, column 1 (section-3.ptx, line 1)
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

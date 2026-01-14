@@ -9,3 +9,57 @@ INFO    : Added pretext web server entry dc4670d9b1 48985 8133 localhost
 
 INFO    : Server will soon be available at http://localhost:8133
 INFO    : Opening browser for target `web` at http://localhost:8133/output/web
+WARNING : Port 8133 could not be used.
+WARNING : Trying port 8134 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8134 localhost
+
+INFO    : Server will soon be available at http://localhost:8134
+INFO    : Opening browser for target `web` at http://localhost:8134/output/web
+WARNING : Port 8134 could not be used.
+WARNING : Trying port 8135 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8135 localhost
+
+INFO    : Server will soon be available at http://localhost:8135
+INFO    : Opening browser for target `web` at http://localhost:8135/output/web
+WARNING : Port 8135 could not be used.
+WARNING : Trying port 8136 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8136 localhost
+
+INFO    : Server will soon be available at http://localhost:8136
+INFO    : Opening browser for target `web` at http://localhost:8136/output/web
+WARNING : Port 8136 could not be used.
+WARNING : Trying port 8137 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8137 localhost
+
+INFO    : Server will soon be available at http://localhost:8137
+INFO    : Opening browser for target `web` at http://localhost:8137/output/web
+WARNING : Port 8137 could not be used.
+WARNING : Trying port 8138 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8138 localhost
+
+INFO    : Server will soon be available at http://localhost:8138
+INFO    : Opening browser for target `web` at http://localhost:8138/output/web
+WARNING : Port 8138 could not be used.
+WARNING : Trying port 8139 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8139 localhost
+
+INFO    : Server will soon be available at http://localhost:8139
+INFO    : Opening browser for target `web` at http://localhost:8139/output/web
+WARNING : Port 8139 could not be used.
+WARNING : Trying port 8140 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 48985 8140 localhost
+
+INFO    : Server will soon be available at http://localhost:8140
+INFO    : Opening browser for target `web` at http://localhost:8140/output/web
+WARNING : Port 8140 could not be used.
+WARNING : Trying port 8141 instead.
+
+INFO    : There are 10 or more servers on file. Cleaning up ...
+INFO    : Found PreTeXt web server at localhost:8128
