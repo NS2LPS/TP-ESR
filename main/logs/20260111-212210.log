@@ -9,3 +9,5 @@ INFO    : Added pretext web server entry 8ba23d8a46 26943 8128 localhost
 
 INFO    : Server will soon be available at http://localhost:8128
 INFO    : Opening browser for target `web` at http://localhost:8128/output/web
+INFO    : Stopping PreTeXt web server.
+INFO    : 

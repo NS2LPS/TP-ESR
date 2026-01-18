@@ -1,0 +1,32 @@
+INFO    : Building target print
+INFO    : XSL conversion of /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx by /Users/jerome/.ptx/2.35.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jerome/.ptx/2.35.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/output/print.
+INFO    : discovering source file's directory name: /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source
+INFO    : verifying and expanding input directory: /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/generated-assets
+INFO    : verifying and expanding input directory: /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/../assets
+INFO    : input directory expanded to absolute path: /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/assets
+INFO    : discovering source file's directory name: /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source
+INFO    : XSL conversion of /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx by /Users/jerome/.ptx/2.35.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jerome/.ptx/2.35.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx to LaTeX as /var/folders/sl/gqsq35s137l8dm3187tcn1h00000gp/T/ptx-3gjiyfmu/main.tex
+INFO    : XSL conversion of /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx by /Users/jerome/.ptx/2.35.0/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/jerome/.ptx/2.35.0/core/xsl/pretext-latex.xsl
+INFO    : XSL conversion of /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx by /Users/jerome/.ptx/2.35.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jerome/.ptx/2.35.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Removing temporary directory /var/folders/sl/gqsq35s137l8dm3187tcn1h00000gp/T/ptx-3gjiyfmu
+INFO    : Removing temporary directory /var/folders/sl/gqsq35s137l8dm3187tcn1h00000gp/T/ptx-rwos4zct
+INFO    : Removing temporary directory /var/folders/sl/gqsq35s137l8dm3187tcn1h00000gp/T/ptx-yu3ma8ld
+INFO    : 
+Finished build for target print. The output is in /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/output/print.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

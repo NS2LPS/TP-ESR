@@ -8,23 +8,20 @@
   </bibinfo>
   <titlepage><titlepage-items/></titlepage>
     <p>
-        L'objectif de la séance est de mettre en évidence le phénomène de résonance paramagnétique électronique. Ce phénomène également appelé résonance de spin électronique ou Electron Paramagnetic Resonance (EPR) en anglais, est une technique de spectroscopie utilisée pour étudier les espèces chimiques possédant des électrons non appariés. Elle est particulièrement adaptée à l’analyse des radicaux libres, des ions de métaux de transition et de certains défauts paramagnétiques dans les solides. Le principe de la RPE repose sur l’interaction entre le moment magnétique de l’électron et un champ magnétique externe. Lorsqu’un échantillon paramagnétique est soumis à ce champ et irradié par des micro-ondes, une transition entre les niveaux d’énergie des spins électroniques peut se produire si la condition de résonance est satisfaite.
-    </p>  
-    <p>
-        Cette condition de résonance s'écrit 
+        L'objectif de la séance est de mettre en évidence le phénomène de résonance paramagnétique électronique. Ce phénomène, également appelé résonance de spin électronique ou Electron Paramagnetic Resonance (EPR) en anglais, est une technique de spectroscopie utilisée pour étudier les espèces chimiques possédant des électrons non appariés. Elle est particulièrement adaptée à l’analyse des radicaux libres, des ions de métaux de transition et de certains défauts paramagnétiques dans les solides. Le principe de la RPE repose sur l’interaction entre le moment magnétique de l’électron et un champ magnétique externe. Lorsqu’un échantillon paramagnétique est soumis à ce champ et irradié par des micro-ondes, une transition entre les niveaux d’énergie des spins électroniques se produit lorsque la condition de résonance 
         <md> <mrow> h \nu = g \mu_B B </mrow></md>
-        où <m>g</m> est le rapport gyromagnétique de l'électron (ou facteur de Landé) et <m>\mu_B</m> est le magnéton de Bohr. Pour un électron dans le vide, <m>g \approx 2</m> et la fréquence de résonance est d'environ 2.8 MHz/G. 
+        est satisfaite. Dans cette formule, <m>g</m> est le rapport gyromagnétique de l'électron (ou facteur de Landé) et <m>\mu_B</m> est le magnéton de Bohr. Pour un électron dans le vide, <m>g \approx 2</m> et la fréquence de résonance est d'environ 2.8 MHz/G. 
     </p>
     <p>
-        Pour observer cette résonance, nous allons coupler les spins électroniques à un résonateur diélectrique réalisé en <m>\ce{KTaO3}</m> (KTO), un matériau de grande constante diélectrique (<m>\epsilon_r \approx 400</m>) et observer la modification de la résonance du résonateur induite par la présence des spins. En rampant le champ magnétique, la fréquence de résonance des spins augmente et lorsqu'elle traverse celle du résonateur, on observe un croisement évité, permettant d'identifier la résonance de spin électronique.
+        Pour observer cette résonance, nous allons coupler les spins électroniques à un résonateur diélectrique réalisé en <m>\ce{KTaO3}</m> (KTO), un matériau de grande constante diélectrique (<m>\epsilon_r \approx 300</m>), et observer la modification de la résonance induite par la présence des spins. Lorsqu'on augmente le champ magnétique, la fréquence de résonance des spins augmente et on observe un croisement évité lorsqu'elle traverse celle du résonateur.
     </p>
     <p>
       Le TP se déroule en trois parties:
       <ul>
-        <li>Dans la première partie, l'objectif est d'apprendre à manipuler un analyseur de réseau vectoriel (VNA) qui est un instrument de mesure fondamental en ingéniérie micro-onde. Ici, on utilise le VNA pour caractériser le résonateur diélectrique en KTO.
+        <li>Dans la première partie, l'objectif est d'apprendre à manipuler un analyseur de réseau vectoriel (VNA) qui est un instrument de mesure fondamental en ingénierie micro-ondes. Ici, on utilise le VNA pour caractériser le résonateur diélectrique en KTO.
         </li>
         <li>
-          Dans la deuxième partie, on réalise un montage appelé dit de Pound-Drever-Hall permettant de suivre dans le temps la fréquence de résonance du résonateur.
+          Dans la deuxième partie, on réalise un montage dit de Pound-Drever-Hall permettant de suivre en temps réel la fréquence de résonance du résonateur.
         </li>
         <li>
           Enfin dans la troisième partie, le résonateur en KTO est couplé à des spins électroniques afin d'observer la résonance de spin.
@@ -32,24 +29,24 @@
       </ul>
     </p>
     <p>
-      Ce document vous guidera tout au long du TP. Vous utiliserez un notebook Jupyter pour acquérir des données sur l'ordinateur et les sauver. Vous placerez vos fichiers dans le répertoire correspondant à votre groupe qui est accessible <url href="http://localhost:8888/lab/tree/">ici</url>.
+      Ce document vous guidera tout au long du TP. Vous utiliserez un notebook Jupyter pour acquérir des données sur l'ordinateur et les enregistrer. Vous placerez vos fichiers dans le répertoire correspondant à votre groupe qui est accessible <url href="http://localhost:8888/lab/tree/">ici</url>.
     </p>
     <p>
       <alert>Afin de ne pas endommager le matériel mis à votre disposition, nous vous demandons de faire attention aux trois points suivants:</alert>
       <ul>
         <li>
           <p>
-            toujours utiliser la clef dynamométrique pour serrer un cable SMA, et ne pas serrer au-delà du couple réglé sur la clef
+            Toujours utiliser la clé dynamométrique pour serrer un câble SMA, et ne pas serrer au-delà du couple réglé sur la clé.
           </p>
         </li>
         <li>
           <p>
-            ne pas envoyer plus que 1 mW de puissance micro-onde dans la diode de détection
+            Ne pas envoyer plus que 1 mW de puissance micro-onde sur la diode de détection.
           </p>
         </li>
         <li>
           <p>
-            ne pas faire tomber le résonateur en KTO qui est petit et transparent et se perd vite.
+            Ne pas faire tomber le résonateur en KTO qui est petit, transparent et se perd vite...
           </p>
         </li>
       </ul>

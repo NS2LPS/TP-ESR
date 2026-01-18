@@ -99,15 +99,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.9';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
 </script>
 </head>
@@ -137,7 +137,10 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div></li>
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="shorttitlelowercase-2.html#shorttitlelowercase-2-4" class="internal"><span class="title">Résumé</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Résonateur diélectrique en KTO</span></a></div>
 <ul class="structural toc-item-list">
@@ -150,7 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Montage Pound-Drever-Hall</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#sec-montage" class="internal"><span class="codenumber">2.1</span> <span class="title">Schéma du montage</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lockin" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lockin</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lock-in" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lock-in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -158,35 +161,41 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-magnet" class="internal"><span class="codenumber">3.1</span> <span class="title">Calibration de l’aimant</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-ddlockin" class="internal"><span class="codenumber">3.2</span> <span class="title">Montage à double détection synchrone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-mesure-g" class="internal"><span class="codenumber">3.3</span> <span class="title">Estimation de <span class="process-math">\(g\)</span></span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-2"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Montage Pound-Drever-Hall</span>
 </h2>
-<section class="introduction" id="section-2-2"><div class="para" id="section-2-2-1">Le montage de Pound-Drever-Hall est surtout utilisé en optique pour asservir un laser sur une cavité. Il peut être adapté au régime micro-onde avec une source et un résonateur. A la résonance, l’intensité su signal transmis ou réfléchi par le résonateur passe par un maximum ou un minimum avec une dérivée nulle. La méthode développée par Pound, Drever et Hall permet d’obtenir un signal d’erreur qui passe par zéro lorsque la fréquence de la source traverse la fréquence de résonance de la cavité. La page <a class="external" href="https://en.wikipedia.org/wiki/Pound%E2%80%93Drever%E2%80%93Hall_technique" target="_blank">Wikipedia</a> explique en détail la technique. La méthode est utilisée le plus souvent en réflexion mais fonctionne également en transmission.<div class="autopermalink" data-description="Paragraphe"><a href="#section-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<section class="introduction" id="section-2-2"><div class="para" id="section-2-2-1">Le montage de Pound-Drever-Hall est surtout utilisé en optique pour asservir un laser sur une cavité. Il peut être adapté au régime micro-onde avec une source et un résonateur. A la résonance, l’intensité du signal transmis ou réfléchi par le résonateur présente un extremum avec une dérivée nulle. La méthode développée par Pound, Drever et Hall permet d’obtenir un signal d’erreur qui passe par zéro lorsque la fréquence de la source traverse celle du résonateur. Une description détaillée de la technique est disponible sur la page <a class="external" href="https://en.wikipedia.org/wiki/Pound%E2%80%93Drever%E2%80%93Hall_technique" target="_blank">Wikipedia dédiée</a>. La méthode est utilisée le plus souvent en réflexion mais fonctionne également en transmission.<div class="autopermalink" data-description="Paragraphe"><a href="#section-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/pdh_principle.svg" role="img" class="contained"></div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/pdh_principle.svg" role="img" class="contained"></div>
 <div class="para logical" id="section-2-2-3">
-<div class="para">Pour obtenir un signal d’erreur, la source est modulé en phase à une fréquence <span class="process-math">\(f_{\phi\text{M}}\text{.}\)</span> Le signal arrivant sur la résonateur contient trois fréquences: une porteuse à <span class="process-math">\(f\)</span> et deux bandes latérales à <span class="process-math">\(f \pm f_{\phi\text{M}}\text{.}\)</span> En notation complexe, l’amplitude émise par la source incidente sur le résonateur s’écrit:</div>
+<div class="para">Pour obtenir un signal d’erreur, la source est modulée en phase à une fréquence <span class="process-math">\(f_{\phi\text{M}}\text{.}\)</span> Le signal arrivant sur le résonateur contient trois fréquences: une porteuse à <span class="process-math">\(f\)</span> et deux bandes latérales à <span class="process-math">\(f \pm f_{\phi\text{M}}\text{.}\)</span> En notation complexe, l’amplitude émise par la source s’écrit:</div>
 <div class="displaymath process-math" id="section-2-2-3-4">
 \begin{gather*}
 A^{\text{in}} = A_0 e^{2i\pi f t} (1 + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon  \, e^{2i\pi f_{\phi\text{M}} t}  ) 
 \end{gather*}
 </div>
-<div class="para">Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. Le signal est réfléchi par le résonateur, que l’on suppose sans perte. Le coefficient de réflexion est de module unité et les trois composantes subissent juste un déphasage à la réflexion. Supposons que <span class="process-math">\(f_{\phi\text{M}} \gg \kappa\text{,}\)</span> les bandes latérales ne sont alors pas affectées par le résonateur et ne sont donc pas déphasées. L’amplitude réfléchie est</div>
+<div class="para">Notez bien la présence du signe moins entre les amplitudes des deux bandes latérales. On suppose que le taux de perte du résonateur est uniquement dû au couplage par le port de mesure. Le coefficient de réflexion est alors de module unité et les trois composantes subissent juste un déphasage à la réflexion. Si l’on suppose que <span class="process-math">\(f_{\phi\text{M}} \gg \kappa\text{,}\)</span> les bandes latérales ne voient pas la résonance et ne sont donc pas déphasées. L’amplitude réfléchie est</div>
 <div class="displaymath process-math" id="section-2-2-3-6">
 \begin{gather*}
-A^{\text{ref}} = A_0  e^{2i\pi f t} (e^{i \phi} + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon \, e^{2i\pi f_{\phi\text{M}} t}  ) 
+A^{\text{ref}} = A_0  e^{2i\pi f t} (e^{i \varphi} + \epsilon \, e^{2i\pi f_{\phi\text{M}} t} - \epsilon \, e^{2i\pi f_{\phi\text{M}} t}  ) 
 \end{gather*}
 </div>
 <div class="para">Au premier ordre en <span class="process-math">\(\epsilon\text{,}\)</span> la puissance réfléchie est</div>
 <div class="displaymath process-math" id="section-2-2-3-8">
 \begin{gather*}
-P^{\text{ref}} = \frac{1}{2} (1+4 \epsilon \sin \phi \sin 2\pi f_{\phi\text{M}} t) 
+P^{\text{ref}} = \frac{1}{2} (1+4 \epsilon \sin \varphi \sin 2\pi f_{\phi\text{M}} t) 
 \end{gather*}
 </div>
-<div class="para">On voit donc que la phase <span class="process-math">\(\phi\text{,}\)</span> qui passe par zéro à la résonance, peut être mesurée en démodulant la tension en sortie de la diode à la fréquence <span class="process-math">\(f_{\phi\text{M}}\text{.}\)</span> Le signe moins entre bandes latérales permet d’obtenir <span class="process-math">\(\sin \phi\)</span> (et non <span class="process-math">\(\cos \phi\)</span>).</div>
+<div class="para">On voit donc que la phase <span class="process-math">\(\varphi\text{,}\)</span> qui passe par zéro à la résonance, peut être mesurée en démodulant la tension en sortie de la diode à la fréquence <span class="process-math">\(f_{\phi\text{M}}\text{.}\)</span> Le signe moins entre bandes latérales permet d’obtenir <span class="process-math">\(\sin \varphi\)</span> (et non <span class="process-math">\(\cos \varphi\)</span>). Pour un montage en transmission, comme considéré ci-dessous, le maximum de variation de la phase est obtenu pour <span class="process-math">\(\kappa_c=\kappa_i\text{.}\)</span> On a alors</div>
+<div class="displaymath process-math" id="section-2-2-3-14">
+\begin{gather*}
+\varphi = \frac{2\pi \epsilon (f-f_0)}{\kappa_i} 
+\end{gather*}
+</div>
 <div class="autopermalink" data-description="Paragraphe"><a href="#section-2-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div></section><section class="subsection" id="sec-montage"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Schéma du montage</span>
@@ -195,76 +204,76 @@ P^{\text{ref}} = \frac{1}{2} (1+4 \epsilon \sin \phi \sin 2\pi f_{\phi\text{M}} 
 <div class="para logical" id="sec-montage-3">
 <ul class="disc" id="sec-montage-3-1">
 <li id="sec-montage-3-1-1">
-<div class="para" id="sec-montage-3-1-1-1">Réalisez le montage ci-dessus, l’élément à gauche est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionnelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-montage-3-1-1-1">Réalisez le montage ci-dessus, l’élément à gauche, en sortie du porte-échantillon, est la diode permettant de détecter la puissance du signal micro-onde. La tension en sortie est proportionnelle à la puissance micro-onde en entrée. Il ne faut pas dépasser 0 dBm en entrée et la zone de fonctionnement linéaire se situe en dessous de -10 dBm.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#sec-montage-3-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 <li id="sec-montage-3-1-2">
-<div class="para" id="sec-montage-3-1-2-1">Programmez un sweep en fréquence sur la source micro-onde et observez la résonance en mesurant la tension à la sortie de la diode. Vous devez obtenir un pic de tension, comparable à la mesure obtenue en module avec le VNA.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-montage-3-1-2-1">Programmez un sweep en fréquence sur la source micro-onde et observez la résonance en mesurant la tension à la sortie de la diode. Vous devez observer un pic de tension, comparable à la mesure obtenue en module avec le VNA.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#sec-montage-3-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="sec-montage-4">Pour obtenir un signal d’erreur, il faut moduler en phase la source et démoduler le signal en sortie de la diode de détection. Pour cela, on utilise une détection synchrone (lockin), ici un HF2LI de Zürich Instruments.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-montage-4">Pour obtenir un signal d’erreur, il faut moduler en phase la source et démoduler le signal en sortie de la diode de détection. Pour cela, on utilise une détection synchrone (lock-in), ici un HF2LI de Zürich Instruments.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/pdh_setup_2.svg" role="img" class="contained"></div>
 <div class="para logical" id="sec-montage-6">
 <ul class="disc" id="sec-montage-6-1">
 <li id="sec-montage-6-1-1">
-<div class="para" id="sec-montage-6-1-1-1">Modifiez le montage comme ci-dessus pour brancher la modulation du lockin à  <span class="process-math">\(f_{\phi\text{M}}\)</span> sur l’entrée externe de la source micro-onde et la sortie de la diode sur l’entrée de mesure du lockin.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-6-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-montage-6-1-1-1">Modifiez le montage comme ci-dessus pour brancher la modulation du lock-in à <span class="process-math">\(f_{\phi\text{M}}\)</span> sur l’entrée externe de la source micro-onde et la sortie de la diode sur l’entrée de mesure du lock-in.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-6-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#sec-montage-6-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 <li id="sec-montage-6-1-2">
-<div class="para" id="sec-montage-6-1-2-1">Programmez la source micro-onde pour obtenir une modulation en phase pilotée par l’entrée externe. Utilisez le mode <span class="process-math">\(\phi\text{M}\)</span> High Bandwidth et mettre l’amplitude de modulation de phase au maximum.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-6-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="sec-montage-6-1-2-1">Programmez la source micro-onde pour obtenir une modulation en phase pilotée par l’entrée externe. Utilisez le mode <span class="process-math">\(\phi\text{M}\)</span> High Bandwidth et réglez l’amplitude de modulation de phase au maximum.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-6-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#sec-montage-6-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Paragraphe"><a href="#sec-montage-6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Sous-section 2.1: Schéma du montage"><a href="#sec-montage" title="Copy heading and permalink for Sous-section 2.1: Schéma du montage" aria-label="Copy heading and permalink for Sous-section 2.1: Schéma du montage">🔗</a></div></section><section class="subsection" id="subsec-lockin"><h3 class="heading hide-type">
-<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Réglage du lockin</span>
+<div class="autopermalink" data-description="Sous-section 2.1: Schéma du montage"><a href="#sec-montage" title="Copy heading and permalink for Sous-section 2.1: Schéma du montage" aria-label="Copy heading and permalink for Sous-section 2.1: Schéma du montage">🔗</a></div></section><section class="subsection" id="subsec-lock-in"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Réglage du lock-in</span>
 </h3>
-<div class="para logical" id="subsec-lockin-2">
-<div class="para">L’interface de contrôle du lockin est accessible <a class="external" href="https://localhost:8006" target="_blank">ici</a>.</div>
-<ul class="disc" id="subsec-lockin-2-2">
-<li id="subsec-lockin-2-2-1">
-<div class="para" id="subsec-lockin-2-2-1-1">Programmez le lockin pour effectuer une mesure à <span class="process-math">\(f_{\phi\text{M}}\)</span> de l’ordre de quelques MHz (typiquement 2 MHz), utilisez une amplitude de modulation de 1 Vpp maximum.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para logical" id="subsec-lock-in-2">
+<div class="para">L’interface de contrôle du lock-in est accessible <a class="external" href="https://localhost:8006" target="_blank">ici</a>.</div>
+<ul class="disc" id="subsec-lock-in-2-2">
+<li id="subsec-lock-in-2-2-1">
+<div class="para" id="subsec-lock-in-2-2-1-1">Programmez le lock-in pour effectuer une mesure à <span class="process-math">\(f_{\phi\text{M}}\)</span> de l’ordre de quelques MHz (typiquement 2 MHz), utilisez une amplitude de modulation de 1 Vpp maximum.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsec-lockin-2-2-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-lock-in-2-2-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="subsec-lockin-2-2-2">
-<div class="para" id="subsec-lockin-2-2-2-1">Réglez la démodulation jusqu’à observer un signal d’erreur lorsque la source effectue un sweep en fréquence.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="subsec-lock-in-2-2-2">
+<div class="para" id="subsec-lock-in-2-2-2-1">Réglez la démodulation jusqu’à observer un signal d’erreur lorsque la source effectue un sweep en fréquence.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsec-lockin-2-2-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-lock-in-2-2-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="subsec-lockin-2-2-3">
-<div class="para" id="subsec-lockin-2-2-3-1">Programmez le lockin pour envoyer le résultat de la démodulation sur la voie auxiliaire 1 afin de pouvoir l’observer sur l’oscillo.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2-2-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="subsec-lock-in-2-2-3">
+<div class="para" id="subsec-lock-in-2-2-3-1">Programmez le lock-in pour envoyer le résultat de la démodulation sur la voie auxiliaire 1 afin de pouvoir l’observer sur l’oscillo.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2-2-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsec-lockin-2-2-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-lock-in-2-2-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="subsec-lockin-2-2-4">
-<div class="para" id="subsec-lockin-2-2-4-1">Optimisez les paramètres, fréquence, déphasage, amplitude de modulation, position du KTO... pour maximiser l’amplitude du signal d’erreur.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2-2-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="subsec-lock-in-2-2-4">
+<div class="para" id="subsec-lock-in-2-2-4-1">Optimisez les paramètres, fréquence, déphasage, amplitude de modulation, position du KTO... pour maximiser l’amplitude du signal d’erreur.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2-2-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsec-lockin-2-2-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-lock-in-2-2-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="subsec-lockin-2-2-5">
-<div class="para" id="subsec-lockin-2-2-5-1">Sauvez quelques traces d’oscillo montrant les différents signaux en fonction de la rampe de fréquence.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2-2-5-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="subsec-lock-in-2-2-5">
+<div class="para" id="subsec-lock-in-2-2-5-1">Enregistrez quelques traces d’oscillo montrant les différents signaux en fonction de la rampe de fréquence.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2-2-5-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsec-lockin-2-2-5" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-lock-in-2-2-5" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="subsec-lockin-2-2-6">
-<div class="para" id="subsec-lockin-2-2-6-1">Estimez la sensibilité de la mesure de la fréquence de résonance<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2-2-6-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="subsec-lock-in-2-2-6">
+<div class="para" id="subsec-lock-in-2-2-6-1">Estimez la sensibilité de la mesure de la résonance<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2-2-6-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#subsec-lockin-2-2-6" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-lock-in-2-2-6" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lockin-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-lock-in-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Sous-section 2.2: Réglage du lockin"><a href="#subsec-lockin" title="Copy heading and permalink for Sous-section 2.2: Réglage du lockin" aria-label="Copy heading and permalink for Sous-section 2.2: Réglage du lockin">🔗</a></div></section><div class="autopermalink" data-description="Section 2: Montage Pound-Drever-Hall"><a href="#section-2" title="Copy heading and permalink for Section 2: Montage Pound-Drever-Hall" aria-label="Copy heading and permalink for Section 2: Montage Pound-Drever-Hall">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Sous-section 2.2: Réglage du lock-in"><a href="#subsec-lock-in" title="Copy heading and permalink for Sous-section 2.2: Réglage du lock-in" aria-label="Copy heading and permalink for Sous-section 2.2: Réglage du lock-in">🔗</a></div></section><div class="autopermalink" data-description="Section 2: Montage Pound-Drever-Hall"><a href="#section-2" title="Copy heading and permalink for Section 2: Montage Pound-Drever-Hall" aria-label="Copy heading and permalink for Section 2: Montage Pound-Drever-Hall">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="section-1.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-3.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -13,4 +13,9 @@
 
         <!--<journal name="ams" /> -->
     </common>
+    <latex>
+    <page>
+        <geometry>a4paper,total={16cm,25cm}</geometry>
+    </page>
+    </latex>
 </publication>

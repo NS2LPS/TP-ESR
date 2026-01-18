@@ -99,15 +99,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.9';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
 </script>
 </head>
@@ -137,7 +137,10 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter active"><div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div></li>
+<li class="toc-item toc-frontmatter contains-active">
+<div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="shorttitlelowercase-2.html#shorttitlelowercase-2-4" class="internal"><span class="title">Résumé</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Résonateur diélectrique en KTO</span></a></div>
 <ul class="structural toc-item-list">
@@ -150,7 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Montage Pound-Drever-Hall</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#sec-montage" class="internal"><span class="codenumber">2.1</span> <span class="title">Schéma du montage</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lockin" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lockin</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lock-in" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lock-in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -158,6 +161,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-magnet" class="internal"><span class="codenumber">3.1</span> <span class="title">Calibration de l’aimant</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-ddlockin" class="internal"><span class="codenumber">3.2</span> <span class="title">Montage à double détection synchrone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-mesure-g" class="internal"><span class="codenumber">3.3</span> <span class="title">Estimation de <span class="process-math">\(g\)</span></span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -166,60 +170,60 @@ eBookConfig.enable_chatcodes =  false;
 <div class="author-name">Jérôme Estève, Pierre Grégoire</div>
 <div class="author-info"></div>
 </div>
-<div class="para" id="shorttitlelowercase-2-4">L’objectif de la séance est de mettre en évidence le phénomène de résonance paramagnétique électronique. Ce phénomène également appelé résonance de spin électronique ou Electron Paramagnetic Resonance (EPR) en anglais, est une technique de spectroscopie utilisée pour étudier les espèces chimiques possédant des électrons non appariés. Elle est particulièrement adaptée à l’analyse des radicaux libres, des ions de métaux de transition et de certains défauts paramagnétiques dans les solides. Le principe de la RPE repose sur l’interaction entre le moment magnétique de l’électron et un champ magnétique externe. Lorsqu’un échantillon paramagnétique est soumis à ce champ et irradié par des micro-ondes, une transition entre les niveaux d’énergie des spins électroniques peut se produire si la condition de résonance est satisfaite.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="para logical" id="shorttitlelowercase-2-5">
-<div class="para">Cette condition de résonance s’écrit</div>
-<div class="displaymath process-math" id="shorttitlelowercase-2-5-1">
+<div class="abstract" id="shorttitlelowercase-2-4">
+<span class="title">Résumé</span><div class="para logical" id="shorttitlelowercase-2-4-1">
+<div class="para">L’objectif de la séance est de mettre en évidence le phénomène de résonance paramagnétique électronique. Ce phénomène, également appelé résonance de spin électronique ou Electron Paramagnetic Resonance (EPR) en anglais, est une technique de spectroscopie utilisée pour étudier les espèces chimiques possédant des électrons non appariés. Elle est particulièrement adaptée à l’analyse des radicaux libres, des ions de métaux de transition et de certains défauts paramagnétiques dans les solides. Le principe de la RPE repose sur l’interaction entre le moment magnétique de l’électron et un champ magnétique externe. Lorsqu’un échantillon paramagnétique est soumis à ce champ et irradié par des micro-ondes, une transition entre les niveaux d’énergie des spins électroniques se produit lorsque la condition de résonance</div>
+<div class="displaymath process-math" id="shorttitlelowercase-2-4-1-1">
 \begin{gather*}
 h \nu = g \mu_B B 
 \end{gather*}
 </div>
-<div class="para">où <span class="process-math">\(g\)</span> est le rapport gyromagnétique de l’électron (ou facteur de Landé) et <span class="process-math">\(\mu_B\)</span> est le magnéton de Bohr. Pour un électron dans le vide, <span class="process-math">\(g \approx 2\)</span> et la fréquence de résonance est d’environ 2.8 MHz/G.</div>
-<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para">est satisfaite. Dans cette formule, <span class="process-math">\(g\)</span> est le rapport gyromagnétique de l’électron (ou facteur de Landé) et <span class="process-math">\(\mu_B\)</span> est le magnéton de Bohr. Pour un électron dans le vide, <span class="process-math">\(g \approx 2\)</span> et la fréquence de résonance est d’environ 2.8 MHz/G.</div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="shorttitlelowercase-2-6">Pour observer cette résonance, nous allons coupler les spins électroniques à un résonateur diélectrique réalisé en <span class="process-math">\(\ce{KTaO3}\)</span> (KTO), un matériau de grande constante diélectrique (<span class="process-math">\(\epsilon_r \approx 400\)</span>) et observer la modification de la résonance du résonateur induite par la présence des spins. En rampant le champ magnéitique, la fréquence de résonance des spins augmente et lorsqu’elle traverse celle du résonateur, on observe un croisement évité, permettant d’identifier la résonance de spin électronique.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="shorttitlelowercase-2-4-2">Pour observer cette résonance, nous allons coupler les spins électroniques à un résonateur diélectrique réalisé en <span class="process-math">\(\ce{KTaO3}\)</span> (KTO), un matériau de grande constante diélectrique (<span class="process-math">\(\epsilon_r \approx 300\)</span>), et observer la modification de la résonance induite par la présence des spins. Lorsqu’on augmente le champ magnétique, la fréquence de résonance des spins augmente et on observe un croisement évité lorsqu’elle traverse celle du résonateur.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para logical" id="shorttitlelowercase-2-7">
+<div class="para logical" id="shorttitlelowercase-2-4-3">
 <div class="para">Le TP se déroule en trois parties:</div>
-<ul class="disc" id="shorttitlelowercase-2-7-1">
-<li id="shorttitlelowercase-2-7-1-1">
-<div class="para" id="p-derived-shorttitlelowercase-2-7-1-1">Dans la première partie, l’objectif est d’apprendre à manipuler un analyseur de réseau vectoriel (VNA) qui est un instrument de mesure fondamental en ingéniérie micro-onde. Ici, on utilise le VNA pour caractériser le résonateur diélectrique en KTO.</div>
-<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-7-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<ul class="disc" id="shorttitlelowercase-2-4-3-1">
+<li id="shorttitlelowercase-2-4-3-1-1">
+<div class="para" id="p-derived-shorttitlelowercase-2-4-3-1-1">Dans la première partie, l’objectif est d’apprendre à manipuler un analyseur de réseau vectoriel (VNA) qui est un instrument de mesure fondamental en ingénierie micro-ondes. Ici, on utilise le VNA pour caractériser le résonateur diélectrique en KTO.</div>
+<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-4-3-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="shorttitlelowercase-2-7-1-2">
-<div class="para" id="p-derived-shorttitlelowercase-2-7-1-2">Dans la deuxième partie, on réalise un montage appelé dit de Pound-Drever-Hall permettant de suivre dans le temps la fréquence de résonance du résonateur.</div>
-<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-7-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<li id="shorttitlelowercase-2-4-3-1-2">
+<div class="para" id="p-derived-shorttitlelowercase-2-4-3-1-2">Dans la deuxième partie, on réalise un montage dit de Pound-Drever-Hall permettant de suivre en temps réel la fréquence de résonance du résonateur.</div>
+<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-4-3-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="shorttitlelowercase-2-7-1-3">
-<div class="para" id="p-derived-shorttitlelowercase-2-7-1-3">Enfin dans la troisième partie, le résonateur en KTO est couplé à des spins électroniques afin d’observer la résonance de spin.</div>
-<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-7-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<li id="shorttitlelowercase-2-4-3-1-3">
+<div class="para" id="p-derived-shorttitlelowercase-2-4-3-1-3">Enfin dans la troisième partie, le résonateur en KTO est couplé à des spins électroniques afin d’observer la résonance de spin.</div>
+<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-4-3-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-7" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="shorttitlelowercase-2-8">Ce document vous guidera tout au long du TP. Vous utiliserez un notebook Jupyter pour acquérir des données sur l’ordinateur et les sauver. Vous placerez vos fichiers dans le répertoire correspondant à votre groupe qui est accessible <a class="external" href="http://localhost:8888/lab/tree/" target="_blank">ici</a>.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-8" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="shorttitlelowercase-2-4-4">Ce document vous guidera tout au long du TP. Vous utiliserez un notebook Jupyter pour acquérir des données sur l’ordinateur et les enregistrer. Vous placerez vos fichiers dans le répertoire correspondant à votre groupe qui est accessible <a class="external" href="http://localhost:8888/lab/tree/" target="_blank">ici</a>.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para logical" id="shorttitlelowercase-2-9">
+<div class="para logical" id="shorttitlelowercase-2-4-5">
 <div class="para"><em class="alert">Afin de ne pas endommager le matériel mis à votre disposition, nous vous demandons de faire attention aux trois points suivants:</em></div>
-<ul class="disc" id="shorttitlelowercase-2-9-2">
-<li id="shorttitlelowercase-2-9-2-1">
-<div class="para" id="shorttitlelowercase-2-9-2-1-1">toujours utiliser la clef dynamométrique pour serrer un cable SMA, et ne pas serrer au-delà du couple réglé sur la clef<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-9-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<ul class="disc" id="shorttitlelowercase-2-4-5-2">
+<li id="shorttitlelowercase-2-4-5-2-1">
+<div class="para" id="shorttitlelowercase-2-4-5-2-1-1">Toujours utiliser la clé dynamométrique pour serrer un câble SMA, et ne pas serrer au-delà du couple réglé sur la clé.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-5-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-9-2-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-4-5-2-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="shorttitlelowercase-2-9-2-2">
-<div class="para" id="shorttitlelowercase-2-9-2-2-1">ne pas envoyer plus que 1 mW de puissance micro-onde dans la diode de détection<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-9-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="shorttitlelowercase-2-4-5-2-2">
+<div class="para" id="shorttitlelowercase-2-4-5-2-2-1">Ne pas envoyer plus que 1 mW de puissance micro-onde sur la diode de détection.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-5-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-9-2-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-4-5-2-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
-<li id="shorttitlelowercase-2-9-2-3">
-<div class="para" id="shorttitlelowercase-2-9-2-3-1">ne pas faire tomber le résonateur en KTO qui est petit et transparent et se perd vite.<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-9-2-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<li id="shorttitlelowercase-2-4-5-2-3">
+<div class="para" id="shorttitlelowercase-2-4-5-2-3-1">Ne pas faire tomber le résonateur en KTO qui est petit, transparent et se perd vite...<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-5-2-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-9-2-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" data-description="Point"><a href="#shorttitlelowercase-2-4-5-2-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-9" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#shorttitlelowercase-2-4-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
 </div>
 <div class="autopermalink" data-description="Pages Liminaires: Avant-propos"><a href="#shorttitlelowercase-2" title="Copy heading and permalink for Pages Liminaires: Avant-propos" aria-label="Copy heading and permalink for Pages Liminaires: Avant-propos">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">

@@ -3,7 +3,7 @@
   <title>Observation de la résonance de spin</title>
   <introduction>
     <p>
-        Pour observer la résonance de spin, on dispose d'un électroaimant pouvant générer un champ magnétique variable entre 0 et 1 T. En plaçant un matériau avec des spins électroniques non appariés à la surface du résonateur au centre de l'aimant et en ajustant le champ magnétique pour que la fréquence de résonance des spins <m>g\mu_B B/h</m> coincide avec la fréquence du résonateur, on s'attend à observer une modification de la fréquence de résonance du résonateur que l'on détecte avec le montage Pound-Drever-Hall.
+        Pour observer la résonance de spin, on dispose d'un électroaimant pouvant générer un champ magnétique variable entre 0 et 1 T. En plaçant un matériau contenant des spins non appariés à la surface du résonateur au centre de l'aimant et en ajustant le champ magnétique, on s'attend à observer une modification de la résonance détectée avec le montage Pound-Drever-Hall lorsque la fréquence de résonance des spins <m>g\mu_B B/h</m> coincide avec celle du résonateur.
     </p>
     <p>
         Pour améliorer la sensibilité de la mesure, on réalise un deuxième montage de détection synchrone. Le champ magnétique est modulé à environ 100 Hz et on démodule à cette fréquence le signal de sortie du montage Pound-Drever-Hall (PDH).
@@ -15,7 +15,7 @@
         <ul>
             <li>
                 <p>
-                    A l'aide du gauss-mètre, mesurez l'intensité du champ magnétique au centre de l'aiant pour quelques valeurs de courant. Tracez la courbe de calibration de l'aimant.
+                    A l'aide du gauss-mètre, mesurez l'intensité du champ magnétique au centre de l'aimant pour quelques valeurs de courant. Tracez la courbe de calibration de l'aimant.
                 </p>
             </li>
             <li>
@@ -32,22 +32,22 @@
         <ul>
             <li>
                 <p>
-                    Programmez le H2FLI pour obtenir une modulation à 117 Hz sur la sortie 2
+                    Programmez le H2FLI pour obtenir une modulation à 117 Hz sur la sortie 2.
                 </p>
             </li>
             <li>
                 <p>
-                    Connectez la modulation à l'ampli de courant alimentant les bobines de modulation
+                    Connectez la modulation à l'ampli de courant alimentant les bobines de modulation.
                 </p>
             </li>
             <li>
                 <p>
-                    Ajustez le courant pour obtenir une modulation d'environ 1 A à travers les bobines
+                    Ajustez le courant pour obtenir une modulation d'environ 1 A dans les bobines.
                 </p>
             </li>
             <li>
                 <p>
-                    Envoyez la sortie de la démodulation du montage PDH qui est disponible sur la sortie auxiliaire 1 vers l'entrée 2 du lockin
+                    Envoyez la sortie de la démodulation du montage PDH qui est disponible sur la sortie auxiliaire 1 vers l'entrée 2 du lockin.
                 </p>
             </li>
             <li>
@@ -55,11 +55,26 @@
                     Ajustez les paramètres du lockin, notamment la constante de temps pour optimiser le rapport signal à bruit. 
                 </p>
             </li>
+            <li>
+                <p>
+                    Placez un échantillon de DPPH sur le résonateur et le porte-échantillon au centre de l'aimant.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Ecrivez un code Python permettant d'effectuer une rampe de courant avec l'alimentation Rohde-Schwarz et qui mesure le signal démodulé à 117 Hz pour chaque valeur de champ magnétique.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Observez et enregistrez une courbe de résonance de spin.
+                </p>
+            </li>
         </ul>
     </p>
     <remark>
         <p>
-            Un paramètre important dans une détection synchrone est la constante de temps d'intégration en sortie pour filtrer la composante à <m>2f_m</m> et minimiser le bruit. Plus le temps d'intégration est long, meilleur est le rapport signal/bruit mais plus le temps de réponse est lent. Vous pouvez lire la documentation sur le site de Zürich Instrument <url href="https://docs.zhinst.com/hf2_user_manual/signal_processing_basics.html">ici</url>. En particulier, le temps de stabilisation du signal en fonction de l'ordre du filtre et de la constante de temps <m>\tau</m> est rappelé ci-dessous:
+            Un paramètre important dans une détection synchrone est la constante de temps d'intégration en sortie pour filtrer la composante à <m>2f_m</m> et minimiser le bruit. Plus le temps d'intégration est long, meilleur est le rapport signal/bruit mais plus le temps de réponse est lent. Vous pouvez lire la documentation sur le site de Zurich Instrument <url href="https://docs.zhinst.com/hf2_user_manual/signal_processing_basics.html">ici</url>. En particulier, le temps de stabilisation du signal en fonction de l'ordre du filtre et de la constante de temps <m>\tau</m> est rappelé ci-dessous:
         </p>
         <tabular halign="center">
             <!-- header row -->
@@ -146,5 +161,36 @@
             </row>
         </tabular>
     </remark>
+    <remark>
+        <p>
+            Le DPPH (2,2-diphenyl-1-picrylhydrazyl) est couramment utilisé comme référence standard en résonance paramagnétique électronique (RPE). Cette molécule organique stable possède un électron célibataire délocalisé, ce qui lui confère un signal RPE intense et bien défini à température ambiante. 
+        </p>
+        <image source="DPPH" width="40%"/>
+        <p>
+            Son facteur de Landé est très proche de celui de l’électron libre, avec une valeur typique <m>g \approx 2.0036</m>. C'est une référence particulièrement utile pour l’étalonnage du champ magnétique et la calibration d’un spectromètre RPE. Le spectre se caractérise par une raie unique étroite, dont la largeur est peu dépendante des conditions expérimentales.
+        </p>            
+    </remark>
+  </subsection>
+  <subsection xml:id="subsec-mesure-g">
+    <title>Estimation de <m>g</m></title>
+    <p>
+        <ul>
+            <li>
+                <p>
+                    Proposez une première méthode pour estimer le facteur <m>g</m> du DPPH. Quelle est la principale source d'erreur ?
+                </p>
+            </li>
+            <li>
+                <p>
+                    Pour obtenir d'autres points de mesure, trouvez des modes du KTO à plus haute fréquence et observez à nouveau la résonance. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Pour obtenir un point à plus basse fréquence, vous pouvez utiliser le deuxième résonateur en KTO.
+                </p>
+            </li>
+        </ul>
+    </p>
   </subsection>
 </section>

@@ -1,0 +1,12 @@
+INFO    : Building target print
+INFO    : XSL conversion of /Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main/source/main.ptx by /Users/jerome/.ptx/2.35.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error assembling source file: Namespace prefix xsl on param is not defined, line 3, column 72 (main.ptx, line 3)
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

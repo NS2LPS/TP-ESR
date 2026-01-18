@@ -1,0 +1,88 @@
+INFO    : Now preparing local server to preview your project directory `/Users/jerome/Documents/Projets/TP Microwave Quantum Machine ESR or Radar/TP-ESR/main`.
+INFO    :   (Reminder: use `pretext deploy` to deploy your built project to a public
+INFO    :   GitHub Pages site that can be shared with readers who cannot access your
+INFO    :   personal computer.)
+INFO    : 
+INFO    : starting server ...
+INFO    : setting up PreTeXt web server ...
+INFO    : Added pretext web server entry dc4670d9b1 43207 8128 localhost
+
+INFO    : Server will soon be available at http://localhost:8128
+INFO    : Opening browser for target `web` at http://localhost:8128/output/web
+WARNING : Port 8128 could not be used.
+WARNING : Trying port 8129 instead.
+
+WARNING : Port 8129 could not be used.
+WARNING : Trying port 8130 instead.
+
+WARNING : Port 8130 could not be used.
+WARNING : Trying port 8131 instead.
+
+WARNING : Port 8131 could not be used.
+WARNING : Trying port 8132 instead.
+
+WARNING : Port 8132 could not be used.
+WARNING : Trying port 8133 instead.
+
+WARNING : Port 8133 could not be used.
+WARNING : Trying port 8134 instead.
+
+WARNING : Port 8134 could not be used.
+WARNING : Trying port 8135 instead.
+
+WARNING : Port 8135 could not be used.
+WARNING : Trying port 8136 instead.
+
+WARNING : Port 8136 could not be used.
+WARNING : Trying port 8137 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8137 localhost
+
+INFO    : Server will soon be available at http://localhost:8137
+INFO    : Opening browser for target `web` at http://localhost:8137/output/web
+WARNING : Port 8137 could not be used.
+WARNING : Trying port 8138 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8138 localhost
+
+INFO    : Server will soon be available at http://localhost:8138
+INFO    : Opening browser for target `web` at http://localhost:8138/output/web
+WARNING : Port 8138 could not be used.
+WARNING : Trying port 8139 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8139 localhost
+
+INFO    : Server will soon be available at http://localhost:8139
+INFO    : Opening browser for target `web` at http://localhost:8139/output/web
+WARNING : Port 8139 could not be used.
+WARNING : Trying port 8140 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8140 localhost
+
+INFO    : Server will soon be available at http://localhost:8140
+INFO    : Opening browser for target `web` at http://localhost:8140/output/web
+WARNING : Port 8140 could not be used.
+WARNING : Trying port 8141 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8141 localhost
+
+INFO    : Server will soon be available at http://localhost:8141
+INFO    : Opening browser for target `web` at http://localhost:8141/output/web
+WARNING : Port 8141 could not be used.
+WARNING : Trying port 8142 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8142 localhost
+
+INFO    : Server will soon be available at http://localhost:8142
+INFO    : Opening browser for target `web` at http://localhost:8142/output/web
+WARNING : Port 8142 could not be used.
+WARNING : Trying port 8143 instead.
+
+INFO    : Added pretext web server entry dc4670d9b1 43207 8143 localhost
+
+INFO    : Server will soon be available at http://localhost:8143
+INFO    : Opening browser for target `web` at http://localhost:8143/output/web
+WARNING : Port 8143 could not be used.
+WARNING : Trying port 8144 instead.
+
+INFO    : There are 10 or more servers on file. Cleaning up ...

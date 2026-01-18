@@ -3,13 +3,13 @@
   <title>Résonateur diélectrique en KTO</title>
   <introduction>
     <p>
-      Dans cette première partie, l'objectif est de caractériser le résonateur diélectrique qui sera utilisé dans la troisième partie pour observer la résonance de spin. Pour observer la résonance qui se situe dans le domaine micro-onde (entre 7 et 8 GHz), on utilise un analyseur de réseau vectoriel, en anglais Vector Network Analyzer (VNA). 
+      Dans cette première partie, l'objectif est de caractériser le résonateur diélectrique qui sera utilisé dans la troisième partie pour observer la résonance de spin. Pour observer la résonance qui se situe dans le domaine micro-ondes (entre 7 et 8 GHz), on utilise un analyseur de réseau vectoriel, en anglais Vector Network Analyzer (VNA). 
     </p>
   </introduction>
   <subsection xml:id="subsec-">
     <title>Analyseur de réseau (VNA)</title>
     <p>
-    Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <m>S_{ij}</m> d'un dispositif micro-onde à un ou deux ports.  
+    Un analyseur de réseau vectoriel permet de mesurer les paramètres de scattering <m>S_{ij}</m> d'un dispositif micro-ondes à un ou deux ports.  
     </p>
     <image source="scattering" width="50%"/>            
     <p>
@@ -19,7 +19,7 @@
       </mrow></md>
     </p>
     <p>
-      L'analyseur peut mesurer à la fois les coefficients de réflexion <m>S_{ii}</m> et de transmission <m>S_{i \neq j}</m>. En général <m>S_{12}=S_{21}</m>, mais ce n'est pas forcément le cas. Pour mesurer, par exemple <m>S_{12}</m>, l'appareil émet un signal par le port 2 et mesure le signal sur le port 1. Le VNA mesure le module et le phase de chaque paramètre <m>S_{ij}</m> en fonction de la fréquence. 
+      L'analyseur peut mesurer à la fois les coefficients de réflexion <m>S_{ii}</m> et de transmission <m>S_{i \neq j}</m>. En général <m>S_{12}=S_{21}</m>, mais ce n'est pas forcément le cas. Pour mesurer, par exemple <m>S_{12}</m>, l'appareil émet un signal par le port 2 et mesure le signal sur le port 1. Le VNA mesure le module et la phase de chaque paramètre <m>S_{ij}</m> en fonction de la fréquence. 
     </p>
     <p>
       Les paramètres les plus importants à régler pour la mesure sont:
@@ -31,7 +31,7 @@
         </li>
         <li>
           <p>
-            le nombre de points <m>N</m> dans le sweep en fréquence qui fixe l'écart <m>\delta f = \Delta f/N</m> entre deux points de msesure
+            le nombre de points <m>N</m> dans le sweep en fréquence qui fixe l'écart <m>\delta f = \Delta f/N</m> entre deux points de mesure
           </p>
         </li>
         <li>
@@ -50,11 +50,11 @@
   <subsection xml:id="subsection-calibration">
     <title>Calibration du VNA</title>
     <p>
-      Avant d'utiliser le VNA pour caractériser un élément, il faut effectuer une calibration afin de s'affranchir de la propagation dans les cables entre le VNA et le dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port, puis on mesure la transmission entre les deux ports (through).
+      Avant d'utiliser le VNA pour caractériser un élément, il faut effectuer une calibration afin de s'affranchir de la propagation dans les câbles entre le VNA et le dispositif à caractériser. Pour effectuer cette calibration, on applique des standards (open, short, match) sur chaque port, puis on mesure la transmission entre les deux ports (through).
       <ul>
         <li>
           <p>
-            Branchez deux câbles SMA sur les deux ports du VNA et connecter les deux câbles avec un I. Appuyez sur "Preset" pour appliquer les paramètres de mesure par défaut.
+            Branchez deux câbles SMA sur les deux ports du VNA et connectez les deux câbles avec un I. Appuyez sur "Preset" pour appliquer les paramètres de mesure par défaut.
           </p>
         </li>
         <li>
@@ -74,17 +74,17 @@
         </li>
         <li>
           <p>
-            Enlevez le dispositif de calibration et observez à nouveau les coefficients de réflexion en phase et module. Qu'observez vous ?
+            Enlevez le dispositif de calibration et observez à nouveau les coefficients de réflexion en phase et module. Qu'observez-vous ?
           </p>
         </li>
         <li>
           <p>
-            Connectez à nouveau les deux cables avec un I et observez la transmission en phase et module. Qu'observez vous ?
+            Connectez à nouveau les deux câbles avec un I et observez la transmission en phase et module. Qu'observez-vous ?
           </p>
         </li>
         <li>
           <p>
-            Remplacez le I par le guide microstrip sur le porte échantillon. Comment évolue la phase avec la fréquence ? En déduire la vitesse de propagation dans le guide du porte-échantillon. On pourra acquérir une trace et en faire l'analyse dans un notebook Jupyter.
+            Remplacez le I par le guide microstrip sur le porte-échantillon. Comment évolue la phase avec la fréquence ? En déduire la vitesse de propagation dans le guide du porte-échantillon. On pourra acquérir une trace et en faire l'analyse dans un notebook Jupyter.
           </p>
         </li>
         <li>
@@ -98,11 +98,12 @@
   <subsection xml:id="subsec-resonator-coupling">
     <title>Caractérisation du résonateur en KTO</title>
     <p>
-      Le résonateur diélectrique utilisé ici est un résonateur parallélépipédique en KTO. L'épaisseur du résonateur est 500 µm, bien plus faible que les dimensions latérales qui sont 5x5 mm. En première approximation, on peut donc considérer que la couche de KTO est un guide planaire. Les modes propres sont alors les ondes stationnaires d'un résonateur carré. Le mode fondamental est le mode TE01, dont le champ magnétique ressemble à celui d'un dipôle magnétique. La figure ci-dessous montre l'intensité et les lignes de champ magnétique:
+      On utilise un résonateur parallélépipédique en KTO de dimensions 5x5x0.5 mm. Le KTO est un matériau paraélectrique proche de la transition ferroélectrique. Il est donc très facilement polarisable et sa constante diélectrique est très élevée, environ 300 à température ambiante et 4000 à basse température. Comme l'épaisseur du résonateur est bien plus petite que ses dimensions transverses, on peut considérer le KTO comme un guide planaire. Les modes propres sont alors les ondes stationnaires d'un résonateur carré. Le mode fondamental est le mode TE01 dont le champ magnétique ressemble à celui d'un dipôle magnétique. La figure ci-dessous montre l'intensité et les lignes de champ magnétique:
     </p>
     <image source="KTO_TE01_mag_field_lines" width="50%" />
     <p>
-      Pour exciter les modes de résonance, il suffit de placer le KTO près du guide d'onde sur le porte échantillon.
+      L'intérêt principal de ce résonateur de grande constante diélectrique est d'obtenir un champ magnétique micro-ondes intense à la surface du résonateur. 
+      Pour exciter les modes de résonance, il suffit de placer le KTO près du guide d'onde sur le porte-échantillon.
     </p>
     <p>
       <ul>
@@ -119,11 +120,24 @@
       </ul>
     </p>
     <p>
-      Pour comprendre l'évolution de la résonance, on introduit le taux de perte par couplage <m>\kappa_c</m> et le taux de perte intrinsèque <m>\kappa_i</m>. Les pertes totales sont <m>\kappa=\kappa_c+\kappa_i</m>, l'énergie stockée dans le résonateur décroît comme <m>\exp (-\kappa t)</m> avec le temps. On distingue deux régimes limites: le régime sur-couplé <m>\kappa_c \gg \kappa_i</m> et le régime sous-couplé <m>\kappa_c \ll \kappa_i</m>. Sans faire de calcul, essayez de tracer <m>S_{12}</m>, <m>S_{13}</m> et <m>S_{33}</m> dans chaque régime. Les numéros des ports sont définis sur le schéma ci-dessous:
+      Pour comprendre l'évolution de la résonance, on introduit le taux de perte par couplage <m>\kappa_c</m> et le taux de perte intrinsèque <m>\kappa_i</m>. Les pertes totales sont <m>\kappa=\kappa_c+\kappa_i</m>, l'énergie stockée dans le résonateur décroît comme <m>\exp (-\kappa t)</m> avec le temps. On distingue deux régimes limites: le régime sur-couplé <m>\kappa_c \gg \kappa_i</m> et le régime sous-couplé <m>\kappa_c \ll \kappa_i</m>.
+      <ul>
+        <li>
+          <p>
+          Sans faire de calcul, essayez de tracer <m>S_{12}</m>, <m>S_{13}</m> et <m>S_{33}</m> dans chaque régime. Les numéros des ports sont définis sur le schéma ci-dessous:            
+          </p>
+        </li>
+      </ul>
     </p>
     <image source="sample_holder" width="50%" />
     <p>
-      Effectuez les mesures au VNA pour vérifier vos prédictions. Sauvez quelques traces au format HDF5 qui vous serviront à illustrer votre rapport et essayez d'estimer <m>\kappa_i</m> pour le résonateur. 
+      <ul>
+        <li>
+          <p>
+          Effectuez les mesures au VNA pour vérifier vos prédictions. Enregistrez quelques traces au format HDF5 qui vous serviront à illustrer votre rapport et essayez d'estimer <m>\kappa_i</m> pour le résonateur.             
+          </p>
+        </li>
+      </ul>
     </p>
     <p>
       Pour mesurer la résonance de spin, on cherche à mesurer le plus précisément possible la fréquence de résonance du résonateur. 

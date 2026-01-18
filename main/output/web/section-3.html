@@ -99,15 +99,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.9';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
 </script>
 </head>
@@ -137,7 +137,10 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div></li>
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="shorttitlelowercase-2.html" class="internal"><span class="title">Avant-propos</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="shorttitlelowercase-2.html#shorttitlelowercase-2-4" class="internal"><span class="title">Résumé</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Résonateur diélectrique en KTO</span></a></div>
 <ul class="structural toc-item-list">
@@ -150,7 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Montage Pound-Drever-Hall</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#sec-montage" class="internal"><span class="codenumber">2.1</span> <span class="title">Schéma du montage</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lockin" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lockin</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-lock-in" class="internal"><span class="codenumber">2.2</span> <span class="title">Réglage du lock-in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
@@ -158,13 +161,14 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-magnet" class="internal"><span class="codenumber">3.1</span> <span class="title">Calibration de l’aimant</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-ddlockin" class="internal"><span class="codenumber">3.2</span> <span class="title">Montage à double détection synchrone</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-mesure-g" class="internal"><span class="codenumber">3.3</span> <span class="title">Estimation de <span class="process-math">\(g\)</span></span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-3"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Observation de la résonance de spin</span>
 </h2>
-<section class="introduction" id="section-3-2"><div class="para" id="section-3-2-1">Pour observer la résonance de spin, on dispose d’un électroaimant pouvant générer un champ magnétique variable entre 0 et 1 T. En plaçant un matériau avec des spins électroniques non appariés à la surface du résonateur au centre de l’aimant et en ajustant le champ magnétique pour que la fréquence de résonance des spins <span class="process-math">\(g\mu_B B/h\)</span> coincide avec la fréquence du résonateur, on s’attend à observer une modification de la fréquence de résonance du résonateur que l’on détecte avec le montage Pound-Drever-Hall.<div class="autopermalink" data-description="Paragraphe"><a href="#section-3-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<section class="introduction" id="section-3-2"><div class="para" id="section-3-2-1">Pour observer la résonance de spin, on dispose d’un électroaimant pouvant générer un champ magnétique variable entre 0 et 1 T. En plaçant un matériau contenant des spins non appariés à la surface du résonateur au centre de l’aimant et en ajustant le champ magnétique, on s’attend à observer une modification de la résonance détectée avec le montage Pound-Drever-Hall lorsque la fréquence de résonance des spins <span class="process-math">\(g\mu_B B/h\)</span> coincide avec celle du résonateur.<div class="autopermalink" data-description="Paragraphe"><a href="#section-3-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="para" id="section-3-2-2">Pour améliorer la sensibilité de la mesure, on réalise un deuxième montage de détection synchrone. Le champ magnétique est modulé à environ 100 Hz et on démodule à cette fréquence le signal de sortie du montage Pound-Drever-Hall (PDH).<div class="autopermalink" data-description="Paragraphe"><a href="#section-3-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div></section><section class="subsection" id="subsec-magnet"><h3 class="heading hide-type">
@@ -173,7 +177,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="subsec-magnet-2">
 <ul class="disc" id="subsec-magnet-2-1">
 <li id="subsec-magnet-2-1-1">
-<div class="para" id="subsec-magnet-2-1-1-1">A l’aide du gauss-mètre, mesurez l’intensité du champ magnétique au centre de l’aiant pour quelques valeurs de courant. Tracez la courbe de calibration de l’aimant.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-magnet-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-magnet-2-1-1-1">A l’aide du gauss-mètre, mesurez l’intensité du champ magnétique au centre de l’aimant pour quelques valeurs de courant. Tracez la courbe de calibration de l’aimant.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-magnet-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#subsec-magnet-2-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
@@ -191,22 +195,22 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="subsec-ddlockin-2">
 <ul class="disc" id="subsec-ddlockin-2-1">
 <li id="subsec-ddlockin-2-1-1">
-<div class="para" id="subsec-ddlockin-2-1-1-1">Programmez le H2FLI pour obtenir une modulation à 117 Hz sur la sortie 2<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-ddlockin-2-1-1-1">Programmez le H2FLI pour obtenir une modulation à 117 Hz sur la sortie 2.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 <li id="subsec-ddlockin-2-1-2">
-<div class="para" id="subsec-ddlockin-2-1-2-1">Connectez la modulation à l’ampli de courant alimentant les bobines de modulation<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-ddlockin-2-1-2-1">Connectez la modulation à l’ampli de courant alimentant les bobines de modulation.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 <li id="subsec-ddlockin-2-1-3">
-<div class="para" id="subsec-ddlockin-2-1-3-1">Ajustez le courant pour obtenir une modulation d’environ 1 A à travers les bobines<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-ddlockin-2-1-3-1">Ajustez le courant pour obtenir une modulation d’environ 1 A dans les bobines.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
 <li id="subsec-ddlockin-2-1-4">
-<div class="para" id="subsec-ddlockin-2-1-4-1">Envoyez la sortie de la démodulation du montage PDH qui est disponible sur la sortie auxiliaire 1 vers l’entrée 2 du lockin<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-ddlockin-2-1-4-1">Envoyez la sortie de la démodulation du montage PDH qui est disponible sur la sortie auxiliaire 1 vers l’entrée 2 du lockin.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
@@ -215,17 +219,32 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-5" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
 </li>
+<li id="subsec-ddlockin-2-1-6">
+<div class="para" id="subsec-ddlockin-2-1-6-1">Placez un échantillon de DPPH sur le résonateur et le porte-échantillon au centre de l’aimant.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-6-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-6" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec-ddlockin-2-1-7">
+<div class="para" id="subsec-ddlockin-2-1-7-1">Ecrivez un code Python permettant d’effectuer une rampe de courant avec l’alimentation Rohde-Schwarz et qui mesure le signal démodulé à 117 Hz pour chaque valeur de champ magnétique.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-7-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-7" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec-ddlockin-2-1-8">
+<div class="para" id="subsec-ddlockin-2-1-8-1">Observez et enregistrez une courbe de résonance de spin.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2-1-8-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-ddlockin-2-1-8" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
 </ul>
 <div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <article class="remark remark-like" id="subsec-ddlockin-3"><h4 class="heading">
 <span class="type">Remarque</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="subsec-ddlockin-3-1">Un paramètre important dans une détection synchrone est la constante de temps d’intégration en sortie pour filtrer la composante à <span class="process-math">\(2f_m\)</span> et minimiser le bruit. Plus le temps d’intégration est long, meilleur est le rapport signal/bruit mais plus le temps de réponse est lent. Vous pouvez lire la documentation sur le site de Zürich Instrument ici. En particulier, le temps de stabilisitation du signal est donné par le tableua ci-dessous, le temps <span class="process-math">\(\tau\)</span> est la constante de temps indiqué dans le panneau de configuration<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-ddlockin-3-1">Un paramètre important dans une détection synchrone est la constante de temps d’intégration en sortie pour filtrer la composante à <span class="process-math">\(2f_m\)</span> et minimiser le bruit. Plus le temps d’intégration est long, meilleur est le rapport signal/bruit mais plus le temps de réponse est lent. Vous pouvez lire la documentation sur le site de Zurich Instrument <a class="external" href="https://docs.zhinst.com/hf2_user_manual/signal_processing_basics.html" target="_blank">ici</a>. En particulier, le temps de stabilisation du signal en fonction de l’ordre du filtre et de la constante de temps <span class="process-math">\(\tau\)</span> est rappelé ci-dessous:<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="c m b0 r0 l0 t0 lines">Ordre</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">Ordre du filtre</th>
 <th scope="col" class="c m b0 r0 l0 t0 lines">50%</th>
 <th scope="col" class="c m b0 r0 l0 t0 lines">63% <span class="process-math">\((1-1/e)\)</span>
 </th>
@@ -338,7 +357,38 @@ eBookConfig.enable_chatcodes =  false;
 </td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Remarque 3.1"><a href="#subsec-ddlockin-3" title="Copy heading and permalink for Remarque 3.1" aria-label="Copy heading and permalink for Remarque 3.1">🔗</a></div></article><div class="autopermalink" data-description="Sous-section 3.2: Montage à double détection synchrone"><a href="#subsec-ddlockin" title="Copy heading and permalink for Sous-section 3.2: Montage à double détection synchrone" aria-label="Copy heading and permalink for Sous-section 3.2: Montage à double détection synchrone">🔗</a></div></section><div class="autopermalink" data-description="Section 3: Observation de la résonance de spin"><a href="#section-3" title="Copy heading and permalink for Section 3: Observation de la résonance de spin" aria-label="Copy heading and permalink for Section 3: Observation de la résonance de spin">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Remarque 3.1"><a href="#subsec-ddlockin-3" title="Copy heading and permalink for Remarque 3.1" aria-label="Copy heading and permalink for Remarque 3.1">🔗</a></div></article><article class="remark remark-like" id="subsec-ddlockin-4"><h4 class="heading">
+<span class="type">Remarque</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="subsec-ddlockin-4-1">Le DPPH (2,2-diphenyl-1-picrylhydrazyl) est couramment utilisé comme référence standard en résonance paramagnétique électronique (RPE). Cette molécule organique stable possède un électron célibataire délocalisé, ce qui lui confère un signal RPE intense et bien défini à température ambiante.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/DPPH.svg" role="img" class="contained"></div>
+<div class="para" id="subsec-ddlockin-4-3">Son facteur de Landé est très proche de celui de l’électron libre, avec une valeur typique <span class="process-math">\(g \approx 2.0036\text{.}\)</span> C’est une référence particulièrement utile pour l’étalonnage du champ magnétique et la calibration d’un spectromètre RPE. Le spectre se caractérise par une raie unique étroite, dont la largeur est peu dépendante des conditions expérimentales.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-ddlockin-4-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remarque 3.2"><a href="#subsec-ddlockin-4" title="Copy heading and permalink for Remarque 3.2" aria-label="Copy heading and permalink for Remarque 3.2">🔗</a></div></article><div class="autopermalink" data-description="Sous-section 3.2: Montage à double détection synchrone"><a href="#subsec-ddlockin" title="Copy heading and permalink for Sous-section 3.2: Montage à double détection synchrone" aria-label="Copy heading and permalink for Sous-section 3.2: Montage à double détection synchrone">🔗</a></div></section><section class="subsection" id="subsec-mesure-g"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Estimation de <span class="process-math">\(g\)</span></span>
+</h3>
+<div class="para logical" id="subsec-mesure-g-2">
+<ul class="disc" id="subsec-mesure-g-2-1">
+<li id="subsec-mesure-g-2-1-1">
+<div class="para" id="subsec-mesure-g-2-1-1-1">Proposez une première méthode pour estimer le facteur <span class="process-math">\(g\)</span> du DPPH. Quelle est la principale source d’erreur ?<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-mesure-g-2-1-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-mesure-g-2-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec-mesure-g-2-1-2">
+<div class="para" id="subsec-mesure-g-2-1-2-1">Pour obtenir d’autres points de mesure, trouvez des modes du KTO à plus haute fréquence et observez à nouveau la résonance.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-mesure-g-2-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-mesure-g-2-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="subsec-mesure-g-2-1-3">
+<div class="para" id="subsec-mesure-g-2-1-3-1">Pour obtenir un point à plus basse fréquence, vous pouvez utiliser le deuxième résonateur en KTO.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-mesure-g-2-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#subsec-mesure-g-2-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-mesure-g-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Sous-section 3.3: Estimation de g"><a href="#subsec-mesure-g" title="Copy heading and permalink for Sous-section 3.3: Estimation de g" aria-label="Copy heading and permalink for Sous-section 3.3: Estimation de g">🔗</a></div></section><div class="autopermalink" data-description="Section 3: Observation de la résonance de spin"><a href="#section-3" title="Copy heading and permalink for Section 3: Observation de la résonance de spin" aria-label="Copy heading and permalink for Section 3: Observation de la résonance de spin">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="section-2.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
